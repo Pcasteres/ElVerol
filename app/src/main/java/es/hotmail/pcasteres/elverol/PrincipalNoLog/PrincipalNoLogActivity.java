@@ -24,8 +24,12 @@ public class PrincipalNoLogActivity
         //inicializar los botones
         // do the setup
         PrincipalNoLogScreen.configure(this);
-        findViewById(R.id.relojes).setOnClickListener(this);
-        findViewById((R.id.exterior).setOnclickListener(this);
+        //findViewById(R.id.relojes).setOnClickListener(this);
+        //findViewById(R.id.exterior).setOnClickListener(this);
+       // findViewById(R.id.portavelas).setOnClickListener(this);
+       // findViewById(R.id.velas).setOnClickListener(this);
+        //findViewById(R.id.cuadros).setOnClickListener(this);
+        //findViewById(R.id.odmetalart).setOnClickListener(this);
     }
 
     @Override
