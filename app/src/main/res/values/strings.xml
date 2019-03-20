@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">El Verol</string>
-    <string name="exterior">Exterior</string>
+    <string name="odmetalart">OD METALART</string>
+    <string name="cuadros">CUADROS</string>
+    <string name="velas">VELAS</string>
+    <string name="portavelas">PORTAVELAS</string>
+    <string name="exterior">EXTERIOR</string>
+    <string name="relojes">RELOJES</string>
 </resources>
