@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,63 +7,61 @@
     android:padding="16dp"
     tools:context=".PrincipalNoLog.PrincipalNoLogActivity">
 
-    <android.support.constraint.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <Button
+        android:id="@+id/relojes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/relojes"
+        />
 
-        <Button
-            android:id="@+id/odmetalart"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/odmetalart"
-            app:layout_constraintLeft_toLeftOf="@+id/velas"
-            app:layout_constraintLeft_toRightOf="@+id/cuadros"
-            app:layout_constraintTop_toTopOf="@+id/cuadros" />
+    <Button
+        android:id="@+id/odmetalart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/odmetalart" />
 
-        <Button
-            android:id="@+id/cuadros"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/cuadros"
-            tools:layout_editor_absoluteX="61dp"
-            tools:layout_editor_absoluteY="537dp" />
+    <Button
+        android:id="@+id/portavelas"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/portavelas"
+        app:layout_constraintLeft_toLeftOf="@+id/cuadros"
+        tools:layout_editor_absoluteY="325dp" />
 
-        <Button
-            android:id="@+id/velas"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="156dp"
-            android:text="@string/velas"
-            app:layout_constraintLeft_toLeftOf="@+id/portavelas"
-            app:layout_constraintLeft_toRightOf="@+id/portavelas"
-            app:layout_constraintTop_toTopOf="@+id/portavelas" />
+    <Button
+        android:id="@+id/velas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="156dp"
+        android:text="@string/velas"
+        app:layout_constraintLeft_toLeftOf="@+id/portavelas"
+        app:layout_constraintLeft_toRightOf="@+id/portavelas"
+        app:layout_constraintTop_toTopOf="@+id/portavelas" />
 
-        <Button
-            android:id="@+id/portavelas"
-            style="@style/Widget.AppCompat.Button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/portavelas"
-            app:layout_constraintLeft_toLeftOf="@+id/cuadros"
-            tools:layout_editor_absoluteY="325dp" />
+    <Button
+        android:id="@+id/cuadros"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cuadros"
+        tools:layout_editor_absoluteX="61dp"
+        tools:layout_editor_absoluteY="537dp" />
 
-        <Button
-            android:id="@+id/exterior"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/exterior"
-            app:layout_constraintLeft_toLeftOf="@+id/velas"
-            app:layout_constraintLeft_toRightOf="@+id/velas"
-            tools:layout_editor_absoluteY="126dp" />
+    <Button
+        android:id="@+id/exterior"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/exterior"
+        app:layout_constraintLeft_toLeftOf="@+id/velas"
+        app:layout_constraintLeft_toRightOf="@+id/velas"
+        tools:layout_editor_absoluteY="126dp" />
 
-        <Button
-            android:id="@+id/relojes"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/relojes"
-            app:layout_constraintLeft_toLeftOf="@+id/cuadros"
-            app:layout_constraintLeft_toRightOf="@+id/portavelas"
-            app:layout_constraintTop_toTopOf="@+id/exterior" />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    </android.support.constraint.ConstraintLayout>
-</FrameLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>
