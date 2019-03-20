@@ -3,7 +3,9 @@ package es.hotmail.pcasteres.elverol.PrincipalNoLog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.TextView;
+import android.widget.Button;
 
 import es.hotmail.pcasteres.elverol.R;
 
@@ -19,8 +21,11 @@ public class PrincipalNoLogActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_principal_no_log);
 
+        //inicializar los botones
         // do the setup
         PrincipalNoLogScreen.configure(this);
+        findViewById(R.id.relojes).setOnClickListener(this);
+        findViewById((R.id.exterior).setOnclickListener(this);
     }
 
     @Override
