@@ -6,12 +6,42 @@
     android:padding="16dp"
     tools:context=".PrincipalNoLog.PrincipalNoLogActivity">
 
-    <TextView
-        android:id="@+id/data"
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        tools:text="Hello" />
+        android:layout_height="match_parent">
 
+        <Button
+            android:id="@+id/velas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Velas"
+            tools:layout_editor_absoluteX="220dp"
+            tools:layout_editor_absoluteY="325dp" />
+
+        <Button
+            android:id="@+id/portavelas"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Portavelas"
+            tools:layout_editor_absoluteX="61dp"
+            tools:layout_editor_absoluteY="325dp" />
+
+        <Button
+            android:id="@+id/exterior"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Exterior"
+            tools:layout_editor_absoluteX="220dp"
+            tools:layout_editor_absoluteY="126dp" />
+
+        <Button
+            android:id="@+id/relojes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Relojes"
+            tools:layout_editor_absoluteX="61dp"
+            tools:layout_editor_absoluteY="126dp" />
+
+    </android.support.constraint.ConstraintLayout>
 </FrameLayout>

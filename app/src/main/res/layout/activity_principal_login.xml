@@ -6,12 +6,9 @@
     android:padding="16dp"
     tools:context=".PrincipalLogin.PrincipalLoginActivity">
 
-    <TextView
-        android:id="@+id/data"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        tools:text="Hello" />
-
+    <Button
+        android:id="@+id/relojes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Relojes" />
 </FrameLayout>
