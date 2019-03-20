@@ -3,6 +3,7 @@ package es.hotmail.pcasteres.elverol.DetalleNoLog;
 import android.util.Log;
 import android.content.Intent;
 import android.content.Context;
+import es.hotmail.pcasteres.elverol.app.AppMediator;
 
 public class DetalleNoLogRouter implements DetalleNoLogContract.Router {
 
@@ -22,9 +23,7 @@ public class DetalleNoLogRouter implements DetalleNoLogContract.Router {
     }
 
     @Override
-    public void passDataToNextScreen(DetalleNoLogState state) {
-        mediator.setDetalleNoLogState(state);
-    }
+    public void passDataToNextScreen(DetalleNoLogState state) {    }
 
     @Override
     public DetalleNoLogState getDataFromPreviousScreen() {

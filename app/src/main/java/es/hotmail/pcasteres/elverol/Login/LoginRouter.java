@@ -2,6 +2,7 @@ package es.hotmail.pcasteres.elverol.Login;
 
 import android.content.Intent;
 import android.content.Context;
+import es.hotmail.pcasteres.elverol.app.AppMediator;
 
 public class LoginRouter implements LoginContract.Router {
 
@@ -22,7 +23,7 @@ public class LoginRouter implements LoginContract.Router {
 
     @Override
     public void passDataToNextScreen(LoginState state) {
-        mediator.setLoginState(state);
+
     }
 
     @Override

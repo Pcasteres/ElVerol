@@ -9,8 +9,9 @@ import es.hotmail.pcasteres.elverol.Login.LoginState;
 import es.hotmail.pcasteres.elverol.NewUser.NewUserState;
 import es.hotmail.pcasteres.elverol.PrincipalLogin.PrincipalLoginState;
 import es.hotmail.pcasteres.elverol.PrincipalNoLog.PrincipalNoLogState;
+import es.hotmail.pcasteres.elverol.Carrito.CarritoState;
 
-public class CatalogMediator extends Application {
+public class AppMediator extends Application {
 
     private PrincipalNoLogState principalNoLogState = new PrincipalNoLogState();
     private PrincipalLoginState principalLoginState = new PrincipalLoginState();
@@ -20,9 +21,11 @@ public class CatalogMediator extends Application {
     private DetalleLogState detalleLogState = new DetalleLogState();
     private ListaProductosNoLogState listaProductosNoLogState = new ListaProductosNoLogState();
     private ListaProductosLogState listaProductosLogState = new ListaProductosLogState();
+    private CarritoState carritoState = new CarritoState();
 
     private Product product;
     private User user;
+    private Carrito carrito;
 
     public PrincipalLoginState getPrincipalLoginState() {
         return principalLoginState;
@@ -54,6 +57,8 @@ public class CatalogMediator extends Application {
 
     public ListaProductosNoLogState getListaProductosNoLogState() { return listaProductosNoLogState; }
 
+    public CarritoState getCarritoState() { return carritoState; }
+
     public Product getProduct() {
         Product item = product;
         //product = null;
@@ -74,6 +79,16 @@ public class CatalogMediator extends Application {
 
     public void setUser(User item) { user= item; }
 
-}
 
+
+    public Carrito getCarrito() {
+        Carrito item = carrito;
+        //product = null;
+        return item;
+    }
+
+
+    public void setCarrito(Carrito item) { carrito= item; }
+
+}
 

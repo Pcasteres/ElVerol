@@ -3,6 +3,7 @@ package es.hotmail.pcasteres.elverol.PrincipalNoLog;
 import android.util.Log;
 import android.content.Intent;
 import android.content.Context;
+import es.hotmail.pcasteres.elverol.app.AppMediator;
 
 public class PrincipalNoLogRouter implements PrincipalNoLogContract.Router {
 
@@ -22,9 +23,7 @@ public class PrincipalNoLogRouter implements PrincipalNoLogContract.Router {
     }
 
     @Override
-    public void passDataToNextScreen(PrincipalNoLogState state) {
-        mediator.setPrincipalNoLogState(state);
-    }
+    public void passDataToNextScreen(PrincipalNoLogState state) {    }
 
     @Override
     public PrincipalNoLogState getDataFromPreviousScreen() {

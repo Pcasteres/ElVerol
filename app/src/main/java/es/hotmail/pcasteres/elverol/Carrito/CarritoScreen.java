@@ -1,22 +1,22 @@
-package es.hotmail.pcasteres.elverol.DetalleNoLog;
+package es.hotmail.pcasteres.elverol.Carrito;
 
 import java.lang.ref.WeakReference;
 import es.hotmail.pcasteres.elverol.app.AppMediator;
 import android.support.v4.app.FragmentActivity;
 
-public class DetalleNoLogScreen {
+public class CarritoScreen {
 
-    public static void configure(DetalleNoLogContract.View view) {
+    public static void configure(CarritoContract.View view) {
 
         WeakReference<FragmentActivity> context =
                 new WeakReference<>((FragmentActivity) view);
 
         AppMediator mediator = (AppMediator) context.get().getApplication();
-        DetalleNoLogState state = mediator.getDetalleNoLogState();
+        CarritoState state = mediator.getCarritoState();
 
-        DetalleNoLogContract.Router router = new DetalleNoLogRouter(mediator);
-        DetalleNoLogContract.Presenter presenter = new DetalleNoLogPresenter(state);
-        DetalleNoLogContract.Model model = new DetalleNoLogModel();
+        CarritoContract.Router router = new CarritoRouter(mediator);
+        CarritoContract.Presenter presenter = new CarritoPresenter(state);
+        CarritoContract.Model model = new CarritoModel();
         presenter.injectModel(model);
         presenter.injectRouter(router);
         presenter.injectView(new WeakReference<>(view));

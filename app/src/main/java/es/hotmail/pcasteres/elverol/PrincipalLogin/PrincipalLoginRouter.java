@@ -3,6 +3,7 @@ package es.hotmail.pcasteres.elverol.PrincipalLogin;
 import android.util.Log;
 import android.content.Intent;
 import android.content.Context;
+import es.hotmail.pcasteres.elverol.app.AppMediator;
 
 public class PrincipalLoginRouter implements PrincipalLoginContract.Router {
 
@@ -22,9 +23,7 @@ public class PrincipalLoginRouter implements PrincipalLoginContract.Router {
     }
 
     @Override
-    public void passDataToNextScreen(PrincipalLoginState state) {
-        mediator.setPrincipalLoginState(state);
-    }
+    public void passDataToNextScreen(PrincipalLoginState state) {    }
 
     @Override
     public PrincipalLoginState getDataFromPreviousScreen() {

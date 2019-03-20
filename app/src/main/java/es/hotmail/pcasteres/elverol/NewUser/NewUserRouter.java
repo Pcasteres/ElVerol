@@ -3,6 +3,7 @@ package es.hotmail.pcasteres.elverol.NewUser;
 import android.util.Log;
 import android.content.Intent;
 import android.content.Context;
+import es.hotmail.pcasteres.elverol.app.AppMediator;
 
 public class NewUserRouter implements NewUserContract.Router {
 
@@ -22,9 +23,7 @@ public class NewUserRouter implements NewUserContract.Router {
     }
 
     @Override
-    public void passDataToNextScreen(NewUserState state) {
-        mediator.setNewUserState(state);
-    }
+    public void passDataToNextScreen(NewUserState state) {    }
 
     @Override
     public NewUserState getDataFromPreviousScreen() {

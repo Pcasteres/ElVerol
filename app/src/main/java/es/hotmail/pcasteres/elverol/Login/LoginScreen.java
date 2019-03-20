@@ -1,7 +1,7 @@
 package es.hotmail.pcasteres.elverol.Login;
 
 import java.lang.ref.WeakReference;
-
+import es.hotmail.pcasteres.elverol.app.AppMediator;
 import android.support.v4.app.FragmentActivity;
 
 public class LoginScreen {
