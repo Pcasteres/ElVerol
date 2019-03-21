@@ -1,42 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
     tools:context=".PrincipalLogin.PrincipalLoginActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+    <Button
+        android:id="@+id/relojes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Relojes" />
 
-            <Button
-                android:id="@+id/relojes"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Relojes" />
 
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="       " />
+    <Button
+        android:id="@+id/exterior"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/exterior"
+        android:textAlignment="center" />
 
-            <Button
-                android:id="@+id/exterior"
-                android:layout_width="48dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/exterior"
-                android:textAlignment="center" />
-        </LinearLayout>
+</RelativeLayout>
 
-    </LinearLayout>
-</LinearLayout>
+
