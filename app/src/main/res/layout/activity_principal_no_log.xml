@@ -15,6 +15,15 @@
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme" />
 
+    <ImageView
+        android:id="@+id/imageview"
+        android:layout_width="30dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="10dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/menu" />
+
     <TextView
         android:id="@+id/elVerol"
         android:layout_width="400dp"
