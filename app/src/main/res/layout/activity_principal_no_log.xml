@@ -7,6 +7,24 @@
     android:padding="16dp"
     tools:context=".PrincipalNoLog.PrincipalNoLogActivity">
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/background_light"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme" />
+
+    <TextView
+        android:id="@+id/elVerol"
+        android:layout_width="379dp"
+        android:layout_height="56dp"
+        android:fontFamily="@font/Aguero Serif Italic"
+        android:text="EL VEROL"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="30sp" />
+
     <Button
         android:id="@+id/relojes"
         android:layout_width="wrap_content"
@@ -36,13 +54,50 @@
         android:layout_marginBottom="8dp"
         android:text="@string/exterior" />
 
-
-    <RelativeLayout
+    <Button
+        android:id="@+id/portavelas"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginVertical="300dp"
+        android:layout_marginLeft="90dp"
+        android:layout_marginTop="316dp"
+        android:layout_marginEnd="215dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/portavelas" />
 
-    </RelativeLayout>
+    <Button
+        android:id="@+id/velas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginVertical="300dp"
+        android:layout_marginLeft="259dp"
+        android:layout_marginTop="314dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/velas" />
+
+    <Button
+        android:id="@+id/cuadros"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginVertical="500dp"
+        android:layout_marginLeft="75dp"
+        android:layout_marginTop="509dp"
+        android:layout_marginEnd="248dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/cuadros" />
 
 
 </RelativeLayout>
