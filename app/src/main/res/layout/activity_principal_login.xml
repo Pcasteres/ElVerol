@@ -199,13 +199,13 @@
         android:scaleType="fitXY"
         android:src="@drawable/cuadrado" />
     <ImageView
-        android:id="@+id/reloj1"
-        android:layout_width="126dp"
+        android:id="@+id/relojprincipal"
+        android:layout_width="135dp"
         android:layout_height="91dp"
-        android:layout_marginLeft="36dp"
+        android:layout_marginLeft="31dp"
         android:layout_marginTop="95dp"
         android:scaleType="fitXY"
-        android:src="@drawable/reloj1" />
+        android:src="@drawable/relojprincipal" />
     <ImageView
         android:id="@+id/exterior1"
         android:layout_width="126dp"
@@ -214,6 +214,15 @@
         android:layout_marginTop="90dp"
         android:scaleType="fitXY"
         android:src="@drawable/exterior" />
+
+    <ImageView
+        android:id="@+id/portavelasprincipal"
+        android:layout_width="120dp"
+        android:layout_height="160dp"
+        android:layout_marginLeft="42dp"
+        android:layout_marginTop="220dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/portavelasprincipal" />
 
 
 </RelativeLayout>

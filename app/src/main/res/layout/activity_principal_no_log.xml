@@ -207,7 +207,7 @@
         android:layout_marginLeft="36dp"
         android:layout_marginTop="95dp"
         android:scaleType="fitXY"
-        android:src="@drawable/reloj1" />
+        android:src="@drawable/relojprincipal" />
     <ImageView
         android:id="@+id/exterior1"
         android:layout_width="126dp"
