@@ -6,6 +6,16 @@
     android:padding="16dp"
     tools:context=".PrincipalLogin.PrincipalLoginActivity">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+    </ScrollView>
+
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -84,7 +94,6 @@
         android:layout_marginEnd="228dp"
         android:layout_marginRight="60dp"
         android:layout_marginBottom="8dp"
-
         android:background="@android:color/transparent"
         android:fontFamily="@font/Vogue"
         android:text="@string/portavelas"
@@ -248,6 +257,14 @@
         android:layout_marginTop="475dp"
         android:scaleType="fitXY"
         android:src="@drawable/odmetalart" />
+    <ImageView
+        android:id="@+id/carrito"
+        android:layout_width="30dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="340dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/carrito" />
 
 </RelativeLayout>
 
