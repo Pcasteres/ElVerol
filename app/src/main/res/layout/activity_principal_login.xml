@@ -6,22 +6,203 @@
     android:padding="16dp"
     tools:context=".PrincipalLogin.PrincipalLoginActivity">
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/background_light"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme" />
+
+    <ImageView
+        android:id="@+id/imageview2"
+        android:layout_width="30dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="10dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/menu" />
+
+    <TextView
+        android:id="@+id/elVerol"
+        android:layout_width="400dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/Vogue"
+        android:text="EL VEROL"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="36sp" />
 
     <Button
         android:id="@+id/relojes"
+        style="@style/Widget.AppCompat.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Relojes" />
-
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginVertical="180dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="90dp"
+        android:layout_marginTop="210dp"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/Vogue"
+        android:text="@string/relojes"
+        android:textSize="18sp" />
 
     <Button
         android:id="@+id/exterior"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginVertical="180dp"
+        android:layout_marginLeft="265dp"
+        android:layout_marginTop="113dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/Vogue"
         android:text="@string/exterior"
-        android:textAlignment="center" />
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/portavelas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginVertical="360dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="314dp"
+        android:layout_marginEnd="228dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginBottom="8dp"
+
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/Vogue"
+        android:text="@string/portavelas"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/velas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginVertical="360dp"
+        android:layout_marginLeft="259dp"
+        android:layout_marginTop="314dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/Vogue"
+        android:text="@string/velas"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/cuadros"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginVertical="560dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="566dp"
+        android:layout_marginEnd="231dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/Vogue"
+        android:text="@string/cuadros"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/odmetalart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginVertical="560dp"
+        android:layout_marginLeft="246dp"
+        android:layout_marginTop="566dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="70dp"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/Vogue"
+        android:text="@string/odmetalart"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/cuadradorelojes"
+        android:layout_width="126dp"
+        android:layout_height="126dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="90dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/cuadrado" />
+
+    <ImageView
+        android:id="@+id/cuadradoexterior"
+        android:layout_width="126dp"
+        android:layout_height="126dp"
+        android:layout_marginLeft="210dp"
+        android:layout_marginTop="90dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/cuadrado" />
+
+    <ImageView
+        android:id="@+id/cuadradoportavelas"
+        android:layout_width="126dp"
+        android:layout_height="126dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="270dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/cuadrado" />
+
+    <ImageView
+        android:id="@+id/cuadradovelas"
+        android:layout_width="126dp"
+        android:layout_height="126dp"
+        android:layout_marginLeft="211dp"
+        android:layout_marginTop="270dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/cuadrado" />
+
+    <ImageView
+        android:id="@+id/cuadradocuadros"
+        android:layout_width="126dp"
+        android:layout_height="126dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="470dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/cuadrado" />
+    <ImageView
+        android:id="@+id/cuadradodmetalart"
+        android:layout_width="126dp"
+        android:layout_height="126dp"
+        android:layout_marginLeft="211dp"
+        android:layout_marginTop="470dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/cuadrado" />
+
 
 </RelativeLayout>
+
+
+
 
 
