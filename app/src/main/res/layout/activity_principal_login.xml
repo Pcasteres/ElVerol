@@ -198,6 +198,22 @@
         android:layout_marginTop="470dp"
         android:scaleType="fitXY"
         android:src="@drawable/cuadrado" />
+    <ImageView
+        android:id="@+id/reloj1"
+        android:layout_width="126dp"
+        android:layout_height="91dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="95dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/reloj1" />
+    <ImageView
+        android:id="@+id/exterior1"
+        android:layout_width="126dp"
+        android:layout_height="126dp"
+        android:layout_marginLeft="210dp"
+        android:layout_marginTop="90dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/exterior" />
 
 
 </RelativeLayout>
