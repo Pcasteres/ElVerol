@@ -29,7 +29,7 @@
         android:layout_width="400dp"
         android:layout_height="60dp"
         android:layout_marginTop="12dp"
-        android:fontFamily="@font/Vogue"
+        android:fontFamily="@font/vogue"
         android:text="EL VEROL"
         android:textAlignment="center"
         android:textColor="@android:color/black"
@@ -49,7 +49,7 @@
         android:layout_marginTop="210dp"
         android:layout_marginBottom="8dp"
         android:background="@android:color/transparent"
-        android:fontFamily="@font/Vogue"
+        android:fontFamily="@font/vogue"
         android:text="@string/relojes"
         android:textSize="18sp" />
 
@@ -67,7 +67,7 @@
         android:layout_marginRight="60dp"
         android:layout_marginBottom="8dp"
         android:background="@android:color/transparent"
-        android:fontFamily="@font/Vogue"
+        android:fontFamily="@font/vogue"
         android:text="@string/exterior"
         android:textSize="18sp" />
 
@@ -87,7 +87,7 @@
         android:layout_marginBottom="8dp"
 
         android:background="@android:color/transparent"
-        android:fontFamily="@font/Vogue"
+        android:fontFamily="@font/vogue"
         android:text="@string/portavelas"
         android:textSize="18sp" />
 
@@ -105,7 +105,7 @@
         android:layout_marginRight="60dp"
         android:layout_marginBottom="8dp"
         android:background="@android:color/transparent"
-        android:fontFamily="@font/Vogue"
+        android:fontFamily="@font/vogue"
         android:text="@string/velas"
         android:textSize="18sp" />
 
@@ -124,7 +124,7 @@
         android:layout_marginRight="60dp"
         android:layout_marginBottom="8dp"
         android:background="@android:color/transparent"
-        android:fontFamily="@font/Vogue"
+        android:fontFamily="@font/vogue"
         android:text="@string/cuadros"
         android:textSize="18sp" />
 
@@ -143,7 +143,7 @@
         android:layout_marginRight="70dp"
         android:layout_marginBottom="8dp"
         android:background="@android:color/transparent"
-        android:fontFamily="@font/Vogue"
+        android:fontFamily="@font/vogue"
         android:text="@string/odmetalart"
         android:textSize="18sp" />
 
