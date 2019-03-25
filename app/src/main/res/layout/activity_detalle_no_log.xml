@@ -34,9 +34,9 @@
         android:src="@drawable/menu" />
     <ImageView
         android:id="@+id/cuadradoreloj1"
-        android:layout_width="250dp"
+        android:layout_width="350dp"
         android:layout_height="250dp"
-        android:layout_marginLeft="63dp"
+        android:layout_marginLeft="13dp"
         android:layout_marginTop="90dp"
         android:scaleType="fitXY"
         android:src="@drawable/cuadrado" />
@@ -51,12 +51,39 @@
         android:textColor="@android:color/black"
         android:textSize="36sp" />
     <ImageView
-        android:id="@+id/cuadradoreloj2"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
-        android:layout_marginLeft="63dp"
-        android:layout_marginTop="400dp"
+        android:id="@+id/login"
+        android:layout_width="30dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="340dp"
         android:scaleType="fitXY"
-        android:src="@drawable/cuadrado" />
+        android:src="@drawable/login" />
+
+    <ImageView
+        android:id="@+id/reloj"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="72dp"
+        android:layout_marginTop="98dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/reloj1" />
+
+    <TextView
+        android:id="@+id/detallereloj"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="350dp"
+        android:fontFamily="@font/viceroy"
+        android:text="Reloj de pared redondo decorativo
+
+Diámetro: 30 cm
+
+Estilo: vintage, números romanos
+
+Diseño: rústico Country "
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+
 
 </FrameLayout>
