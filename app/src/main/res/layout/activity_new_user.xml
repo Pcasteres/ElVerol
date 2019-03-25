@@ -93,7 +93,8 @@
         android:layout_marginTop="180dp"
         android:text="Nombre" />
 
-        //Usuario
+    //Usuario
+
     <TextView
         android:id="@+id/usuario1"
         android:layout_width="wrap_content"
