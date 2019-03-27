@@ -44,22 +44,11 @@
             android:orientation="vertical">
 
 
-
-
-            <ImageView
-                android:id="@+id/cuadradoiniciarsesion"
-                android:layout_width="160dp"
-                android:layout_height="40dp"
-                android:layout_marginLeft="18dp"
-                android:layout_marginTop="71dp"
-                android:scaleType="fitXY"
-                android:src="@drawable/cuadrado" />
-
             <TextView
                 android:id="@+id/registrarse"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="25dp"
+                android:layout_marginLeft="5dp"
                 android:layout_marginTop="80dp"
                 android:fontFamily="@font/vogue"
                 android:text="Registrarse"
@@ -74,27 +63,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
-                android:layout_marginTop="150dp"
+                android:layout_marginTop="30dp"
                 android:fontFamily="@font/vogue"
                 android:text="Nombre"
                 android:textAppearance="@style/TextAppearance.AppCompat"
                 android:textSize="18sp" />
-
-            <ImageView
-                android:id="@+id/cuadradonombre"
-                android:layout_width="384dp"
-                android:layout_height="50dp"
-                android:layout_marginLeft="0dp"
-                android:layout_marginTop="180dp"
-                android:scaleType="fitXY"
-                android:src="@drawable/cuadrado" />
 
             <EditText
                 android:id="@+id/nombre"
                 android:layout_width="363dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
-                android:layout_marginTop="180dp"
+                android:layout_marginTop="10dp"
                 android:text="Nombre" />
 
             //Usuario
@@ -104,77 +84,69 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
-                android:layout_marginTop="250dp"
+                android:layout_marginTop="30dp"
                 android:fontFamily="@font/vogue"
                 android:text="Usuario"
                 android:textAppearance="@style/TextAppearance.AppCompat"
                 android:textSize="18sp" />
 
-            <ImageView
-                android:id="@+id/cuadradousuario"
-                android:layout_width="384dp"
-                android:layout_height="50dp"
-                android:layout_marginLeft="0dp"
-                android:layout_marginTop="280dp"
-                android:scaleType="fitXY"
-                android:src="@drawable/cuadrado" />
 
             <EditText
                 android:id="@+id/usuario"
                 android:layout_width="363dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
-                android:layout_marginTop="280dp"
+                android:layout_marginTop="20dp"
                 android:text="Usuario" />
 
             //Contraseña
-
-            <ImageView
-                android:id="@+id/cuadradocontraseña"
-                android:layout_width="384dp"
-                android:layout_height="50dp"
-                android:layout_marginLeft="0dp"
-                android:layout_marginTop="380dp"
-                android:scaleType="fitXY"
-                android:src="@drawable/cuadrado" />
-
+            <TextView
+                android:id="@+id/contraseña2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/vogue"
+                android:text="Contraseña"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textSize="18sp" />
             <EditText
                 android:id="@+id/contraseña"
                 android:layout_width="363dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
-                android:layout_marginTop="380dp"
+                android:layout_marginTop="20dp"
                 android:text="Contraseña"
                 android:inputType="textPassword"/>
 
             //como poner la ñ para que no se cambie el formato de letra
 
+            <TextView
+                android:id="@+id/repetircontraseña"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/vogue"
+                android:text="Repita la contraseña"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textSize="18sp" />
             <EditText
-                android:id="@+id/contraseña1"
+                android:id="@+id/contraseñarepetida"
                 android:layout_width="363dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
-                android:layout_marginTop="380dp"
+                android:layout_marginTop="20dp"
                 android:text="Repita la Contraseña"
                 android:inputType="textPassword"/>
 
             //Direccion
-
-            <ImageView
-                android:id="@+id/cuadradodireccion"
-                android:layout_width="384dp"
-                android:layout_height="50dp"
-                android:layout_marginLeft="0dp"
-                android:layout_marginTop="480dp"
-                android:scaleType="fitXY"
-                android:src="@drawable/cuadrado" />
-
             <TextView
                 android:id="@+id/direccion1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
-                android:layout_marginTop="450dp"
+                android:layout_marginTop="30dp"
                 android:fontFamily="@font/vogue"
                 android:text="Direccion"
                 android:textAppearance="@style/TextAppearance.AppCompat"
@@ -185,38 +157,31 @@
                 android:layout_width="363dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
-                android:layout_marginTop="480dp"
+                android:layout_marginTop="20dp"
                 android:text="Dirección" />
 
             //Municipio
-
-            <ImageView
-                android:id="@+id/cuadradomunicipio"
-                android:layout_width="384dp"
-                android:layout_height="50dp"
-                android:layout_marginLeft="0dp"
-                android:layout_marginTop="580dp"
-                android:scaleType="fitXY"
-                android:src="@drawable/cuadrado" />
-
-            <EditText
-                android:id="@+id/municipio"
-                android:layout_width="363dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="580dp"
-                android:text="Municipio" />
 
             <TextView
                 android:id="@+id/municipio1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
-                android:layout_marginTop="550dp"
+                android:layout_marginTop="30dp"
                 android:fontFamily="@font/vogue"
                 android:text="Municipio"
                 android:textAppearance="@style/TextAppearance.AppCompat"
                 android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/municipio"
+                android:layout_width="363dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="20dp"
+                android:text="Municipio" />
+
+
 
             //Telefono
 
@@ -225,7 +190,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
-                android:layout_marginTop="650dp"
+                android:layout_marginTop="30dp"
                 android:fontFamily="@font/vogue"
                 android:text="Telefono"
                 android:textAppearance="@style/TextAppearance.AppCompat"
@@ -236,17 +201,8 @@
                 android:layout_width="363dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
-                android:layout_marginTop="680dp"
+                android:layout_marginTop="20dp"
                 android:text="Telefono" />
-
-            <ImageView
-                android:id="@+id/cuadradotelefono"
-                android:layout_width="384dp"
-                android:layout_height="50dp"
-                android:layout_marginLeft="0dp"
-                android:layout_marginTop="680dp"
-                android:scaleType="fitXY"
-                android:src="@drawable/cuadrado" />
 
             //Correo
 
@@ -255,7 +211,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
-                android:layout_marginTop="750dp"
+                android:layout_marginTop="30dp"
                 android:fontFamily="@font/vogue"
                 android:text="Correo"
                 android:textAppearance="@style/TextAppearance.AppCompat"
@@ -266,17 +222,9 @@
                 android:layout_width="363dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
-                android:layout_marginTop="780dp"
+                android:layout_marginTop="20dp"
                 android:text="Correo" />
 
-            <ImageView
-                android:id="@+id/cuadradocorreo"
-                android:layout_width="384dp"
-                android:layout_height="50dp"
-                android:layout_marginLeft="0dp"
-                android:layout_marginTop="780dp"
-                android:scaleType="fitXY"
-                android:src="@drawable/cuadrado" />
 
         </LinearLayout>
     </ScrollView>
