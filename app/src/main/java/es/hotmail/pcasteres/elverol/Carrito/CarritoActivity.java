@@ -19,6 +19,9 @@ public class CarritoActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_carrito);
 
+        //Código para eliminar el action bar
+        getSupportActionBar().hide();
+
         // do the setup
         CarritoScreen.configure(this);
     }

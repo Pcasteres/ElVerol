@@ -25,6 +25,9 @@ public class NewUserActivity
         EditText User = (EditText) findViewById(R.id.usuario);
         String user = User.getText().toString();
 
+        //Código para eliminar el action bar
+        getSupportActionBar().hide();
+
 
 
 

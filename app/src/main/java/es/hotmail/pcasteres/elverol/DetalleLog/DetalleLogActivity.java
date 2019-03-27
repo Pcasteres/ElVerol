@@ -18,6 +18,8 @@ public class DetalleLogActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detalle_log);
+        //Código para eliminar el action bar
+        getSupportActionBar().hide();
 
         // do the setup
         DetalleLogScreen.configure(this);

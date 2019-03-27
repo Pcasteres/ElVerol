@@ -20,7 +20,8 @@ public class PrincipalNoLogActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_principal_no_log);
-
+        //Código para eliminar el action bar
+        getSupportActionBar().hide();
         //inicializar los botones
         // do the setup
         PrincipalNoLogScreen.configure(this);

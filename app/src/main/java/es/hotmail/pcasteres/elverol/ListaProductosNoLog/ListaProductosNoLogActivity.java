@@ -18,7 +18,8 @@ public class ListaProductosNoLogActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_productos_no_log);
-
+        //Código para eliminar el action bar
+        getSupportActionBar().hide();
         // do the setup
         ListaProductosNoLogScreen.configure(this);
     }

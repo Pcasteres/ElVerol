@@ -18,7 +18,8 @@ public class PrincipalLoginActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_principal_login);
-
+        //Código para eliminar el action bar
+        getSupportActionBar().hide();
         // do the setup
         PrincipalLoginScreen.configure(this);
     }
