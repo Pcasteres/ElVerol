@@ -23,7 +23,7 @@ public class NewUserActivity
         EditText Nombre = (EditText) findViewById(R.id.nombre);
         String nombre = Nombre.getText().toString();
         EditText User = (EditText) findViewById(R.id.usuario);
-        String user = Nombre.getText().toString();
+        String user = User.getText().toString();
 
 
 
