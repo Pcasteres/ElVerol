@@ -3,6 +3,7 @@ package es.hotmail.pcasteres.elverol.NewUser;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import es.hotmail.pcasteres.elverol.R;
@@ -18,6 +19,14 @@ public class NewUserActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_user);
+
+        EditText Nombre = (EditText) findViewById(R.id.nombre);
+        String nombre = Nombre.getText().toString();
+        //EditText Nombre = (EditText) findViewById(R.id.nombre);
+        //String nombre = Nombre.getText().toString();
+
+
+
 
         // do the setup
         NewUserScreen.configure(this);
@@ -41,6 +50,5 @@ public class NewUserActivity
         //Log.e(TAG, "displayData()");
 
         // deal with the data
-        ((TextView) findViewById(R.id.data)).setText(viewModel.data);
     }
 }

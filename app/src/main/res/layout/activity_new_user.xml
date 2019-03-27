@@ -140,20 +140,19 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="380dp"
-        android:text="Contraseña" />
+        android:text="Contraseña"
+        android:inputType="textPassword"/>
 
     //como poner la ñ para que no se cambie el formato de letra
 
-    <TextView
+    <EditText
         android:id="@+id/contraseña1"
-        android:layout_width="wrap_content"
+        android:layout_width="363dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="350dp"
-        android:fontFamily="@font/vogue"
-        android:text="Contraseña"
-        android:textAppearance="@style/TextAppearance.AppCompat"
-        android:textSize="18sp" />
+        android:layout_marginTop="380dp"
+        android:text="Repita la Contraseña"
+        android:inputType="textPassword"/>
 
     //Direccion
 
