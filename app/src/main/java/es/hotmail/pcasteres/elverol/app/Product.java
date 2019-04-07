@@ -6,13 +6,15 @@ public class Product {
     private String descripcion;
     private String imagen;
     private Float precio;
+    private String idcategoria;
 
-    public Product(int id, String nombre, Float precio, String descripcion, String imagen) {
+    public Product(int id, String nombre, Float precio, String descripcion, String imagen, String idcategoria) {
         this.id=id;
         this.descripcion=descripcion;
         this.imagen=imagen;
         this.precio=precio;
         this.nombre=nombre;
+        this.idcategoria=idcategoria;
     }
 
     public int getId() {
@@ -21,6 +23,14 @@ public class Product {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getIdcategoria() {
+        return idcategoria;
+    }
+
+    public void setIdcategoria(String idcategoria) {
+        this.idcategoria = idcategoria;
     }
 
     public String getNombre() {

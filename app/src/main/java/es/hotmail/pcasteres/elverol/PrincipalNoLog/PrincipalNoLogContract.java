@@ -2,12 +2,17 @@ package es.hotmail.pcasteres.elverol.PrincipalNoLog;
 
 import java.lang.ref.WeakReference;
 
+import es.hotmail.pcasteres.elverol.data.CategoryItem;
+import es.hotmail.pcasteres.elverol.data.RepositoryContract;
+
 interface PrincipalNoLogContract {
 
     interface View {
         void injectPresenter(Presenter presenter);
 
         void displayData(PrincipalNoLogViewModel viewModel);
+
+        void displayCategoryListData(PrincipalNoLogViewModel viewModel);
     }
 
     interface Presenter {
@@ -17,17 +22,29 @@ interface PrincipalNoLogContract {
 
         void injectRouter(Router router);
 
-        void fetchData();
+        void fetchCategoryListData();
+
+        void selectProductListData(int item);
+
+        void selectProductListData(CategoryItem item);
     }
 
     interface Model {
-        String fetchData();
+
+        void fetchCategoryListData(
+                RepositoryContract.GetCategoryListCallback callback);
     }
 
     interface Router {
         void navigateToNextScreen();
 
         void passDataToNextScreen(PrincipalNoLogState state);
+
+        void navigateToListaProductosNoLogScreen();
+
+        void passDataToListaProductosNoLogScreen(int item);
+
+        void passDataToListaProductosNoLogScreen(CategoryItem item);
 
         PrincipalNoLogState getDataFromPreviousScreen();
     }

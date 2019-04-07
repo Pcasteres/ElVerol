@@ -1,8 +1,11 @@
 package es.hotmail.pcasteres.elverol.ListaProductosNoLog;
 
-import android.util.Log;
-
 import java.lang.ref.WeakReference;
+import java.util.List;
+
+import es.hotmail.pcasteres.elverol.data.CategoryItem;
+import es.hotmail.pcasteres.elverol.data.ProductItem;
+import es.hotmail.pcasteres.elverol.data.RepositoryContract;
 
 public class ListaProductosNoLogPresenter implements ListaProductosNoLogContract.Presenter {
 
@@ -33,26 +36,35 @@ public class ListaProductosNoLogPresenter implements ListaProductosNoLogContract
     }
 
     @Override
-    public void fetchData() {
-        // Log.e(TAG, "fetchData()");
+    public void fetchListaProductosNoLogData() {
+        // Log.e(TAG, "fetchProductListData()");
 
         // set passed state
-        ListaProductosNoLogState state = router.getDataFromPreviousScreen();
-        if (state != null) {
-            viewModel.data = state.data;
+        CategoryItem item = router.getDataFromPrincipalNoLog();
+
+        if (item != null) {
+            viewModel.category = item;
         }
 
-        if (viewModel.data == null) {
-            // call the model
-            String data = model.fetchData();
+        // call the model
+        model.fetchListaProductosNoLogData(viewModel.category,
+                new RepositoryContract.GetProductListCallback() {
 
-            // set initial state
-            viewModel.data = data;
-        }
+                    @Override
+                    public void setProductList(List<ProductItem> products) {
+                        viewModel.products = products;
 
-        // update the view
-        view.get().displayData(viewModel);
+                        view.get().displayListaProductosNoLogData(viewModel);
+                    }
+                });
 
+    }
+
+
+    @Override
+    public void selectProductListData(ProductItem item) {
+        router.passDataToNextScreen(item);
+        router.navigateToNextScreen();
     }
 
 

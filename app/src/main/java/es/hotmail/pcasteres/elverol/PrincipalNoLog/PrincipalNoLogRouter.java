@@ -1,9 +1,11 @@
 package es.hotmail.pcasteres.elverol.PrincipalNoLog;
 
-import android.util.Log;
-import android.content.Intent;
 import android.content.Context;
+import android.content.Intent;
+
+import es.hotmail.pcasteres.elverol.ListaProductosNoLog.ListaProductosNoLogActivity;
 import es.hotmail.pcasteres.elverol.app.AppMediator;
+import es.hotmail.pcasteres.elverol.data.CategoryItem;
 
 public class PrincipalNoLogRouter implements PrincipalNoLogContract.Router {
 
@@ -17,14 +19,31 @@ public class PrincipalNoLogRouter implements PrincipalNoLogContract.Router {
 
     @Override
     public void navigateToNextScreen() {
+
+    }
+
+    @Override
+    public void passDataToNextScreen(PrincipalNoLogState state) {
+
+    }
+
+    @Override
+    public void navigateToListaProductosNoLogScreen() {
         Context context = mediator.getApplicationContext();
-        Intent intent = new Intent(context, PrincipalNoLogActivity.class);
+        Intent intent = new Intent(context, ListaProductosNoLogActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(intent);
     }
 
     @Override
-    public void passDataToNextScreen(PrincipalNoLogState state) {    }
+    public void passDataToListaProductosNoLogScreen(int item) {
 
+    }
+
+    @Override
+    public void passDataToListaProductosNoLogScreen(CategoryItem item) {
+        mediator.setCategory(item);
+    }
     @Override
     public PrincipalNoLogState getDataFromPreviousScreen() {
         PrincipalNoLogState state = mediator.getPrincipalNoLogState();

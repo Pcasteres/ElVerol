@@ -1,6 +1,11 @@
 package es.hotmail.pcasteres.elverol.PrincipalNoLog;
 
+import java.util.List;
+
+import es.hotmail.pcasteres.elverol.data.CategoryItem;
+
 public class PrincipalNoLogViewModel {
 
-    public String data;
+    public List<CategoryItem> categories;
 }
+

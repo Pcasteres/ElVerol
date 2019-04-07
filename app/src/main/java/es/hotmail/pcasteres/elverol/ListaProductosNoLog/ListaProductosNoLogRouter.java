@@ -1,9 +1,11 @@
 package es.hotmail.pcasteres.elverol.ListaProductosNoLog;
 
-import android.util.Log;
-import android.content.Intent;
 import android.content.Context;
+import android.content.Intent;
+
 import es.hotmail.pcasteres.elverol.app.AppMediator;
+import es.hotmail.pcasteres.elverol.data.CategoryItem;
+import es.hotmail.pcasteres.elverol.data.ProductItem;
 
 public class ListaProductosNoLogRouter implements ListaProductosNoLogContract.Router {
 
@@ -23,11 +25,18 @@ public class ListaProductosNoLogRouter implements ListaProductosNoLogContract.Ro
     }
 
     @Override
-    public void passDataToNextScreen(ListaProductosNoLogState state) {    }
+    public void passDataToNextScreen(ProductItem item) {
+        mediator.setProduct(item);
+    }
 
     @Override
     public ListaProductosNoLogState getDataFromPreviousScreen() {
         ListaProductosNoLogState state = mediator.getListaProductosNoLogState();
         return state;
+    }
+    @Override
+    public CategoryItem getDataFromPrincipalNoLog() {
+        CategoryItem category = mediator.getCategory();
+        return category;
     }
 }

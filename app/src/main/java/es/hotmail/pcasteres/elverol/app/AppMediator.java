@@ -1,15 +1,18 @@
 package es.hotmail.pcasteres.elverol.app;
 
 import android.app.Application;
+
+import es.hotmail.pcasteres.elverol.Carrito.CarritoState;
 import es.hotmail.pcasteres.elverol.DetalleLog.DetalleLogState;
+import es.hotmail.pcasteres.elverol.DetalleNoLog.DetalleNoLogState;
 import es.hotmail.pcasteres.elverol.ListaProductosLog.ListaProductosLogState;
 import es.hotmail.pcasteres.elverol.ListaProductosNoLog.ListaProductosNoLogState;
-import es.hotmail.pcasteres.elverol.DetalleNoLog.DetalleNoLogState;
 import es.hotmail.pcasteres.elverol.Login.LoginState;
 import es.hotmail.pcasteres.elverol.NewUser.NewUserState;
 import es.hotmail.pcasteres.elverol.PrincipalLogin.PrincipalLoginState;
 import es.hotmail.pcasteres.elverol.PrincipalNoLog.PrincipalNoLogState;
-import es.hotmail.pcasteres.elverol.Carrito.CarritoState;
+import es.hotmail.pcasteres.elverol.data.CategoryItem;
+import es.hotmail.pcasteres.elverol.data.ProductItem;
 
 public class AppMediator extends Application {
 
@@ -23,9 +26,20 @@ public class AppMediator extends Application {
     private ListaProductosLogState listaProductosLogState = new ListaProductosLogState();
     private CarritoState carritoState = new CarritoState();
 
-    private Product product;
+    public int getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(int categoria) {
+        this.categoria = categoria;
+    }
+
+    private int categoria;
+    //private Product product;
     private User user;
     private Carrito carrito;
+    private CategoryItem category;
+    private ProductItem product;
 
     public PrincipalLoginState getPrincipalLoginState() {
         return principalLoginState;
@@ -59,14 +73,22 @@ public class AppMediator extends Application {
 
     public CarritoState getCarritoState() { return carritoState; }
 
-    public Product getProduct() {
-        Product item = product;
+    public CategoryItem getCategory() {
+        return category;
+    }
+
+    public void setCategory(CategoryItem category) {
+        this.category = category;
+    }
+
+    public ProductItem getProduct() {
+        ProductItem item = product;
         //product = null;
         return item;
     }
 
 
-    public void setProduct(Product item) {
+    public void setProduct(ProductItem item) {
         product = item;
     }
 

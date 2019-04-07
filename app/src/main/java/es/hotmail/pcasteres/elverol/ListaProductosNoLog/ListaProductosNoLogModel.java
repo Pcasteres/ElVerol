@@ -2,22 +2,27 @@ package es.hotmail.pcasteres.elverol.ListaProductosNoLog;
 
 import android.util.Log;
 
-import java.lang.ref.WeakReference;
+import es.hotmail.pcasteres.elverol.data.CategoryItem;
+import es.hotmail.pcasteres.elverol.data.RepositoryContract;
 
-import android.support.v7.app.AppCompatActivity;
-import android.support.v4.app.FragmentActivity;
 
 public class ListaProductosNoLogModel implements ListaProductosNoLogContract.Model {
 
     public static String TAG = ListaProductosNoLogModel.class.getSimpleName();
 
-    public ListaProductosNoLogModel() {
 
+    private RepositoryContract repository;
+
+    public ListaProductosNoLogModel(RepositoryContract repository){
+        this.repository = repository;
     }
 
     @Override
-    public String fetchData() {
-        // Log.e(TAG, "fetchData()");
-        return "Hello";
+    public void fetchListaProductosNoLogData(
+            CategoryItem category, RepositoryContract.GetProductListCallback callback) {
+
+        Log.e(TAG, "fetchProductListData()");
+        repository.getProductList(category, callback);
     }
+
 }

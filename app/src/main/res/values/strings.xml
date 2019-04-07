@@ -7,4 +7,8 @@
     <string name="exterior">EXTERIOR</string>
     <string name="relojes">RELOJES</string>
     <string name="prueba">prueba</string>
+    <string name="item_content">Item Content</string>
+    <string name="Verol">EL VEROL</string>
+    <string name="menu">menu</string>
+    <string name="appbar_scrolling_view_behavior"></string>
 </resources>

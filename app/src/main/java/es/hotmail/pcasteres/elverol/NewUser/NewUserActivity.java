@@ -24,6 +24,19 @@ public class NewUserActivity
         String nombre = Nombre.getText().toString();
         EditText User = (EditText) findViewById(R.id.usuario);
         String user = User.getText().toString();
+        EditText Direccion = (EditText) findViewById(R.id.direccion);
+        String direccion = Direccion.getText().toString();
+        EditText Contrasena = (EditText) findViewById(R.id.contraseña);
+        String contrasena = Contrasena.getText().toString();
+        EditText Repetircontrasena = (EditText) findViewById(R.id.contraseñarepetida);
+        String repetircontrasena = Repetircontrasena.getText().toString();
+        EditText Municipio = (EditText) findViewById(R.id.municipio);
+        String municipio = Municipio.getText().toString();
+        EditText Telefono = (EditText) findViewById(R.id.telefono);
+        String telefono = Telefono.getText().toString();
+        EditText Correo = (EditText) findViewById(R.id.correo);
+        String correo = Correo.getText().toString();
+
 
         //Código para eliminar el action bar
         getSupportActionBar().hide();

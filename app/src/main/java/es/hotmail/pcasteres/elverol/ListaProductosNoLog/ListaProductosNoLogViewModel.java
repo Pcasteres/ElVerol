@@ -1,6 +1,11 @@
 package es.hotmail.pcasteres.elverol.ListaProductosNoLog;
 
+import java.util.List;
+import es.hotmail.pcasteres.elverol.data.CategoryItem;
+import es.hotmail.pcasteres.elverol.data.ProductItem;
+
 public class ListaProductosNoLogViewModel {
 
-    public String data;
+    public CategoryItem category;
+    public List<ProductItem> products;
 }

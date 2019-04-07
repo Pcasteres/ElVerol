@@ -1,9 +1,7 @@
 package es.hotmail.pcasteres.elverol.Carrito;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
-import android.widget.TextView;
+import android.support.v7.app.AppCompatActivity;
 
 import es.hotmail.pcasteres.elverol.R;
 
@@ -44,6 +42,6 @@ public class CarritoActivity
         //Log.e(TAG, "displayData()");
 
         // deal with the data
-        ((TextView) findViewById(R.id.data)).setText(viewModel.data);
+        //((TextView) findViewById(R.id.data)).setText(viewModel.data);
     }
 }

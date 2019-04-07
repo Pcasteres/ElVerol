@@ -14,7 +14,7 @@
         >
 
 
-        <activity android:name=".NewUser.NewUserActivity">
+        <activity android:name=".PrincipalNoLog.PrincipalNoLogActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,6 +22,14 @@
                     android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ListaProductosNoLog.ListaProductosNoLogActivity"
+            android:parentActivityName=".PrincipalNoLog.PrincipalNoLogActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".PrincipalNoLog.PrincipalNoLogActivity"/>
+        </activity>
+
     </application>
 
 
