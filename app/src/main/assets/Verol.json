@@ -1,0 +1,138 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "content": "Relojes",
+      "image":"R.drawable.relojprincipal",
+      "products": [
+        {
+          "id": 1,
+          "content": "Reloj1",
+          "picture": "https://www.planetware.com/photos-large/E/spain-tenerife-teide-crater.jpg",
+          "details": "Detalles del objeto",
+          "stock": 9
+        },
+        {
+          "id": 7,
+          "content": "Reloj2",
+          "picture": "https://www.planetware.com/photos-large/E/spain-tenerife-auditorio-de-tenerife.jpg",
+          "details": "Detalles del objeto",
+          "stock": 15
+        }
+
+      ]
+    },
+    {
+      "id": 2,
+      "content": "Exterior",
+      "image":"R.drawable.exterior",
+      "products": [
+        {
+          "id": 2,
+          "content": "Exterior1",
+          "picture": "https://www.planetware.com/photos-large/E/spain-lanzarote-timanfaya-volcanic-landscape.jpg",
+          "details": "Detalles del objeto",
+          "stock": 9
+        },
+        {
+          "id": 12,
+          "content": "Exterior2",
+          "picture": "https://www.planetware.com/photos-large/E/spain-lanzarote-cueva-de-los-verdes.jpg",
+          "details": "One of the most popular things to do on Lanzarote is to explore the seven-kilometer-long volcanic tube that extends from La Coruna mountain to the sea. These tubes were formed when the surface of a lava flow cooled and hardened while the molten river of lava still flowed beneath it. When the subterranean lava emptied into the ocean, it left the hollow tube deep underground. The two kilometers inside of the cave you can tour is in its original state - the only things that have been added are lights and walkways for safety. You enter the caves through a jameo - a hole created by the collapse of a thin place in the roof of the lava tube. Some of the larger chambers are as high as nine to 12 meters. The stone of the walls is red, orange, and black, formed by compounds such as iron oxide and calcium carbonate in the stone.",
+          "details": "Detalles del objeto",
+          "stock": 9
+        }
+
+      ]
+    },
+    {
+      "id": 3,
+      "content": "Portavelas",
+      "image":"R.drawable.portavelasprincipal",
+      "products": [
+        {
+          "id": 3,
+          "content": "Beaches of Gran Canaria",
+          "picture": "https://www.planetware.com/photos-large/E/spain-gran-canaria-maspalomas-dunes.jpg",
+          "details": "Detalles del objeto",
+          "stock": 76
+        },
+        {
+          "id": 8,
+          "content": "Las Palmas de Gran Canaria",
+          "picture": "https://www.planetware.com/photos-large/E/amadores-beach-gran-canaria.jpg",
+          "details": "Detalles del objeto",
+          "stock": 91
+        }
+
+      ]
+    },
+    {
+      "id": 4,
+      "content": "Velas",
+      "image":"R.drawable.velaprincipal",
+      "products": [
+        {
+          "id": 6,
+          "content": "The Beaches of Fuerteventura",
+          "picture": "https://www.planetware.com/photos-large/E/spain-fuerteventura-playa-esmeralda.jpg",
+          "details": "Detalles del objeto",
+          "stock": 91
+        },
+        {
+          "id": 9,
+          "content": "The Beaches of Fuerteventura",
+          "picture": "https://www.planetware.com/photos-large/E/spain-fuerteventura-playa-esmeralda.jpg",
+          "details": "Detalles del objeto",
+          "stock": 91
+        }
+
+
+      ]
+    },
+    {
+      "id": 5,
+      "content": "Cuadros",
+      "image":"R.drawable.cuadroprincipal",
+      "products": [
+        {
+          "id": 10,
+          "content": "Santa Cruz de la Palma",
+          "picture": "https://www.planetware.com/photos-large/E/santa-cruz-de-la-palma.jpg",
+          "details": "Detalles del objeto",
+          "stock": 91
+        },
+        {
+          "id": 4,
+          "content": "Caldera de Taburiente National Park",
+          "picture": "https://www.planetware.com/photos-large/E/spain-canary-islands-caldera-de-taburiente.jpg",
+          "details": "Detalles del objeto",
+          "stock": 91
+        }
+
+      ]
+    },
+    {
+      "id": 6,
+      "content": "Odmetalart",
+      "image":"R.drawable.odmetalart",
+      "products": [
+        {
+          "id": 5,
+          "content": "Parque Nacional de Garajonay",
+          "picture": "https://www.planetware.com/photos-large/E/spain-la-gomera-garajonay-national-park.jpg",
+          "details": "Detalles del objeto",
+          "stock": 91
+        },
+        {
+          "id": 11,
+          "content": "Parque Nacional de Garajonay",
+          "picture": "https://www.planetware.com/photos-large/E/spain-la-gomera-garajonay-national-park.jpg",
+          "details": "Detalles del objeto",
+          "stock": 91
+        }
+
+      ]
+    }
+  ]
+}
