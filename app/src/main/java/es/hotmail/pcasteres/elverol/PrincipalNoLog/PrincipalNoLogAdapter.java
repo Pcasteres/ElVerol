@@ -75,6 +75,7 @@ public class PrincipalNoLogAdapter
       super(view);
       contentView = view.findViewById(R.id.content);
       imageView = view.findViewById(R.id.imagen);
+      
     }
   }
 }
