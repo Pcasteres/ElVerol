@@ -7,8 +7,8 @@
       "products": [
         {
           "id": 1,
-          "content": "Reloj1",
-          "picture": "https://www.planetware.com/photos-large/E/spain-tenerife-teide-crater.jpg",
+          "content": "Reloj",
+          "picture": "https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.things-store.es%2F4823-large_default%2Freloj-de-pared-madera-40-cm.jpg&imgrefurl=https%3A%2F%2Fwww.things-store.es%2Fes%2Frelojes%2F1673-reloj-de-pared-madera-40-cm-8420327419316.html&docid=-W6e1l1DEh8p5M&tbnid=FJ3b4na8OwmDyM%3A&vet=10ahUKEwieo4G1osXhAhWCx4UKHbAqCLIQMwjqAigIMAg..i&w=600&h=600&bih=596&biw=1280&q=relojes%20de%20pared&ved=0ahUKEwieo4G1osXhAhWCx4UKHbAqCLIQMwjqAigIMAg&iact=mrc&uact=8",
           "details": "Detalles del objeto",
           "stock": 9
         },
@@ -114,7 +114,7 @@
     },
     {
       "id": 6,
-      "content": "Odmetalart",
+      "content": "OdMetalart",
       "image":"R.drawable.odmetalart",
       "products": [
         {
