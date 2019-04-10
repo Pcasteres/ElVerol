@@ -9,6 +9,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -77,5 +79,14 @@ public class PrincipalNoLogAdapter
       imageView = view.findViewById(R.id.imagen);
       
     }
+  }
+  //Código que permite añadir imágenes faltan los import, que no consigo que funcionen
+  private void loadImageFromURL(ImageView imageView, String imageUrl){
+    RequestManager reqManager = Glide.with(imageView.getContext());
+    RequestBuilder reqBuilder = reqManager.load(imageUrl);
+    RequestOptions reqOptions = new RequestOptions();
+    reqOptions.diskCacheStrategy(DiskCacheStrategy.ALL);
+    reqBuilder.apply(reqOptions);
+    reqBuilder.into(imageView);
   }
 }
