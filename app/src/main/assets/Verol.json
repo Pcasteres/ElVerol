@@ -3,7 +3,8 @@
     {
       "id": 1,
       "content": "Relojes",
-      "image":"R.drawable.relojprincipal",
+      "image":"https://github.com/palmer0/CleanCode-VisitCanary.git",
+
       "products": [
         {
           "id": 1,
@@ -15,7 +16,7 @@
         {
           "id": 7,
           "content": "Reloj2",
-          "picture": "https://www.planetware.com/photos-large/E/spain-tenerife-auditorio-de-tenerife.jpg",
+          "picture": "https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.creapromocion.com%2F14724-large_default%2Freloj-de-pared-publicitario-pierre-cardin-mundi.jpg&imgrefurl=https%3A%2F%2Fwww.creapromocion.com%2Fes%2Frelojes-de-pared-publicitarios%2F3965-reloj-de-pared-publicitario-pierre-cardin-mundi&docid=enTstg82jhoW7M&tbnid=_Y1zhggiEbuWkM%3A&vet=10ahUKEwieo4G1osXhAhWCx4UKHbAqCLIQMwiFAygWMBY..i&w=345&h=440&bih=596&biw=1280&q=relojes%20de%20pared&ved=0ahUKEwieo4G1osXhAhWCx4UKHbAqCLIQMwiFAygWMBY&iact=mrc&uact=8",
           "details": "Detalles del objeto",
           "stock": 15
         }
