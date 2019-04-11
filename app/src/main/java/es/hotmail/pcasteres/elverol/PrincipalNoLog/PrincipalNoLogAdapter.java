@@ -1,6 +1,5 @@
 package es.hotmail.pcasteres.elverol.PrincipalNoLog;
 
-import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -9,6 +8,11 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.RequestBuilder;
+import com.bumptech.glide.RequestManager;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.request.RequestOptions;
 
 
 import java.util.ArrayList;
@@ -22,7 +26,7 @@ public class PrincipalNoLogAdapter
 
   private List<CategoryItem> itemList;
   private final View.OnClickListener clickListener;
-
+  private String imagen;
 
   public PrincipalNoLogAdapter(View.OnClickListener listener) {
 
@@ -66,18 +70,29 @@ public class PrincipalNoLogAdapter
     holder.itemView.setTag(itemList.get(position));
     holder.itemView.setOnClickListener(clickListener);
     holder.contentView.setText(itemList.get(position).content);
-    holder.imageView.setImageDrawable(Drawable.createFromPath(itemList.get(position).image));
+
+    holder.imag.setText(itemList.get(position).image);
+    imagen=itemList.get(position).image;
   }
 
   class ViewHolder extends RecyclerView.ViewHolder {
     final TextView contentView;
+    final TextView imag;
     final ImageView imageView;
 
     ViewHolder(View view) {
       super(view);
       contentView = view.findViewById(R.id.content);
       imageView = view.findViewById(R.id.imagen);
-      
+      imag = view.findViewById(R.id.imag);
+
+
+      ;
+      loadImageFromURL(
+              (ImageView) imageView,
+              (String) imag.getText()
+      );
+
     }
   }
   //Código que permite añadir imágenes faltan los import, que no consigo que funcionen

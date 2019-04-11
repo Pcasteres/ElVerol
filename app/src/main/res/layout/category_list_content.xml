@@ -27,5 +27,9 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/text_margin"
         tools:text="@string/item_content" />
+    <TextView
+        android:id="@+id/imag"
+        android:layout_width="0dp"
+        android:layout_height="0dp" />
 
 </LinearLayout>

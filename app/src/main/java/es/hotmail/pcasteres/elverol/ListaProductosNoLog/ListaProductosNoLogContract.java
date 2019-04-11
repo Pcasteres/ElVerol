@@ -38,9 +38,9 @@ interface ListaProductosNoLogContract {
     }
 
     interface Router {
-        void navigateToNextScreen();
+        void navigateToDetalleNoLogScreen();
 
-        void passDataToNextScreen(ProductItem item);
+        void passDataToDetalleNoLogActivity(ProductItem item);
 
         ListaProductosNoLogState getDataFromPreviousScreen();
 

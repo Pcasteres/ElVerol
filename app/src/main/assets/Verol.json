@@ -3,14 +3,14 @@
     {
       "id": 1,
       "content": "Relojes",
-      "picture":"https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.things-store.es%2F4823-large_default%2Freloj-de-pared-madera-40-cm.jpg&imgrefurl=https%3A%2F%2Fwww.things-store.es%2Fes%2Frelojes%2F1673-reloj-de-pared-madera-40-cm-8420327419316.html&docid=-W6e1l1DEh8p5M&tbnid=FJ3b4na8OwmDyM%3A&vet=10ahUKEwieo4G1osXhAhWCx4UKHbAqCLIQMwjqAigIMAg..i&w=600&h=600&bih=596&biw=1280&q=relojes%20de%20pared&ved=0ahUKEwieo4G1osXhAhWCx4UKHbAqCLIQMwjqAigIMAg&iact=mrc&uact=8",
-
+      "image":"https://www.things-store.es/4823-large_default/reloj-de-pared-madera-40-cm.jpg",
       "products": [
         {
           "id": 1,
           "content": "Reloj",
           "picture": "https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.things-store.es%2F4823-large_default%2Freloj-de-pared-madera-40-cm.jpg&imgrefurl=https%3A%2F%2Fwww.things-store.es%2Fes%2Frelojes%2F1673-reloj-de-pared-madera-40-cm-8420327419316.html&docid=-W6e1l1DEh8p5M&tbnid=FJ3b4na8OwmDyM%3A&vet=10ahUKEwieo4G1osXhAhWCx4UKHbAqCLIQMwjqAigIMAg..i&w=600&h=600&bih=596&biw=1280&q=relojes%20de%20pared&ved=0ahUKEwieo4G1osXhAhWCx4UKHbAqCLIQMwjqAigIMAg&iact=mrc&uact=8",
           "details": "Detalles del objeto",
+          "precio":"9.99",
           "stock": 9
         },
         {
@@ -18,6 +18,7 @@
           "content": "Reloj2",
           "picture": "https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.creapromocion.com%2F14724-large_default%2Freloj-de-pared-publicitario-pierre-cardin-mundi.jpg&imgrefurl=https%3A%2F%2Fwww.creapromocion.com%2Fes%2Frelojes-de-pared-publicitarios%2F3965-reloj-de-pared-publicitario-pierre-cardin-mundi&docid=enTstg82jhoW7M&tbnid=_Y1zhggiEbuWkM%3A&vet=10ahUKEwieo4G1osXhAhWCx4UKHbAqCLIQMwiFAygWMBY..i&w=345&h=440&bih=596&biw=1280&q=relojes%20de%20pared&ved=0ahUKEwieo4G1osXhAhWCx4UKHbAqCLIQMwiFAygWMBY&iact=mrc&uact=8",
           "details": "Detalles del objeto",
+          "precio":"9.99",
           "stock": 15
         }
 
@@ -26,13 +27,14 @@
     {
       "id": 2,
       "content": "Exterior",
-      "image":"R.drawable.exterior",
+      "image":"https://www.planetware.com/photos-large/E/spain-lanzarote-timanfaya-volcanic-landscape.jpg",
       "products": [
         {
           "id": 2,
           "content": "Exterior1",
           "picture": "https://www.planetware.com/photos-large/E/spain-lanzarote-timanfaya-volcanic-landscape.jpg",
           "details": "Detalles del objeto",
+          "precio":"9.99",
           "stock": 9
         },
         {
@@ -41,6 +43,7 @@
           "picture": "https://www.planetware.com/photos-large/E/spain-lanzarote-cueva-de-los-verdes.jpg",
           "details": "One of the most popular things to do on Lanzarote is to explore the seven-kilometer-long volcanic tube that extends from La Coruna mountain to the sea. These tubes were formed when the surface of a lava flow cooled and hardened while the molten river of lava still flowed beneath it. When the subterranean lava emptied into the ocean, it left the hollow tube deep underground. The two kilometers inside of the cave you can tour is in its original state - the only things that have been added are lights and walkways for safety. You enter the caves through a jameo - a hole created by the collapse of a thin place in the roof of the lava tube. Some of the larger chambers are as high as nine to 12 meters. The stone of the walls is red, orange, and black, formed by compounds such as iron oxide and calcium carbonate in the stone.",
           "details": "Detalles del objeto",
+          "precio":"9.99",
           "stock": 9
         }
 
@@ -56,6 +59,7 @@
           "content": "Beaches of Gran Canaria",
           "picture": "https://www.planetware.com/photos-large/E/spain-gran-canaria-maspalomas-dunes.jpg",
           "details": "Detalles del objeto",
+          "precio":"9.99",
           "stock": 76
         },
         {
@@ -63,6 +67,7 @@
           "content": "Las Palmas de Gran Canaria",
           "picture": "https://www.planetware.com/photos-large/E/amadores-beach-gran-canaria.jpg",
           "details": "Detalles del objeto",
+          "precio":"9.99",
           "stock": 91
         }
 
@@ -78,6 +83,7 @@
           "content": "The Beaches of Fuerteventura",
           "picture": "https://www.planetware.com/photos-large/E/spain-fuerteventura-playa-esmeralda.jpg",
           "details": "Detalles del objeto",
+          "precio":"9.99",
           "stock": 91
         },
         {
@@ -85,6 +91,7 @@
           "content": "The Beaches of Fuerteventura",
           "picture": "https://www.planetware.com/photos-large/E/spain-fuerteventura-playa-esmeralda.jpg",
           "details": "Detalles del objeto",
+          "precio":"9.99",
           "stock": 91
         }
 
@@ -101,6 +108,7 @@
           "content": "Santa Cruz de la Palma",
           "picture": "https://www.planetware.com/photos-large/E/santa-cruz-de-la-palma.jpg",
           "details": "Detalles del objeto",
+          "precio":"9.99",
           "stock": 91
         },
         {
@@ -108,6 +116,7 @@
           "content": "Caldera de Taburiente National Park",
           "picture": "https://www.planetware.com/photos-large/E/spain-canary-islands-caldera-de-taburiente.jpg",
           "details": "Detalles del objeto",
+          "precio":"9.99",
           "stock": 91
         }
 
@@ -123,6 +132,7 @@
           "content": "Parque Nacional de Garajonay",
           "picture": "https://www.planetware.com/photos-large/E/spain-la-gomera-garajonay-national-park.jpg",
           "details": "Detalles del objeto",
+          "precio":"9.99",
           "stock": 91
         },
         {
@@ -130,6 +140,7 @@
           "content": "Parque Nacional de Garajonay",
           "picture": "https://www.planetware.com/photos-large/E/spain-la-gomera-garajonay-national-park.jpg",
           "details": "Detalles del objeto",
+          "precio":"9.99",
           "stock": 91
         }
 

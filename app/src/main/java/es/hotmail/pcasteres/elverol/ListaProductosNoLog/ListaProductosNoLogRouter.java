@@ -3,6 +3,7 @@ package es.hotmail.pcasteres.elverol.ListaProductosNoLog;
 import android.content.Context;
 import android.content.Intent;
 
+import es.hotmail.pcasteres.elverol.DetalleNoLog.DetalleNoLogActivity;
 import es.hotmail.pcasteres.elverol.app.AppMediator;
 import es.hotmail.pcasteres.elverol.data.CategoryItem;
 import es.hotmail.pcasteres.elverol.data.ProductItem;
@@ -18,14 +19,14 @@ public class ListaProductosNoLogRouter implements ListaProductosNoLogContract.Ro
     }
 
     @Override
-    public void navigateToNextScreen() {
+    public void navigateToDetalleNoLogScreen() {
         Context context = mediator.getApplicationContext();
-        Intent intent = new Intent(context, ListaProductosNoLogActivity.class);
+        Intent intent = new Intent(context, DetalleNoLogActivity.class);
         context.startActivity(intent);
     }
 
     @Override
-    public void passDataToNextScreen(ProductItem item) {
+    public void passDataToDetalleNoLogActivity(ProductItem item) {
         mediator.setProduct(item);
     }
 

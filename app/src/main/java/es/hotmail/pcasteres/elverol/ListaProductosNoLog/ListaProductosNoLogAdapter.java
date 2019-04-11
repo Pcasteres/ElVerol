@@ -13,7 +13,7 @@ import es.hotmail.pcasteres.elverol.R;
 import es.hotmail.pcasteres.elverol.data.ProductItem;
 
 public class ListaProductosNoLogAdapter
-    extends RecyclerView.Adapter<ListaProductosNoLogAdapter.ViewHolder> {
+        extends RecyclerView.Adapter<ListaProductosNoLogAdapter.ViewHolder> {
 
   private List<ProductItem> itemList;
   private final View.OnClickListener clickListener;
@@ -70,4 +70,3 @@ public class ListaProductosNoLogAdapter
     }
   }
 }
-

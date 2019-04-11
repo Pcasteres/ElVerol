@@ -63,8 +63,8 @@ public class ListaProductosNoLogPresenter implements ListaProductosNoLogContract
 
     @Override
     public void selectProductListData(ProductItem item) {
-        router.passDataToNextScreen(item);
-        router.navigateToNextScreen();
+        router.passDataToDetalleNoLogActivity(item);
+        router.navigateToDetalleNoLogScreen();
     }
 
 

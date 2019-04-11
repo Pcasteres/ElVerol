@@ -2,12 +2,16 @@ package es.hotmail.pcasteres.elverol.DetalleNoLog;
 
 import java.lang.ref.WeakReference;
 
+import es.hotmail.pcasteres.elverol.data.ProductItem;
+
 interface DetalleNoLogContract {
 
     interface View {
         void injectPresenter(Presenter presenter);
 
         void displayData(DetalleNoLogViewModel viewModel);
+
+        void displayProductDetailData(DetalleNoLogViewModel viewModel);
     }
 
     interface Presenter {
@@ -17,7 +21,8 @@ interface DetalleNoLogContract {
 
         void injectRouter(Router router);
 
-        void fetchData();
+        void fetchDataProduct();
+
     }
 
     interface Model {
@@ -25,10 +30,7 @@ interface DetalleNoLogContract {
     }
 
     interface Router {
-        void navigateToNextScreen();
 
-        void passDataToNextScreen(DetalleNoLogState state);
-
-        DetalleNoLogState getDataFromPreviousScreen();
+        ProductItem getDataFromProductListScreen();
     }
 }

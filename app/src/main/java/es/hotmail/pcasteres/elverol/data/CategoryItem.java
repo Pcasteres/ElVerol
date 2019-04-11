@@ -29,8 +29,9 @@ public class CategoryItem {
     return image;
   }
 
-  public CategoryItem(int id, String content) {
+  public CategoryItem(int id, String content, String image) {
     this.id = id;
     this.content = content;
+    this.image= image;
   }
 }

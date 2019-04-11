@@ -1,8 +1,8 @@
 package es.hotmail.pcasteres.elverol.DetalleNoLog;
 
-import android.util.Log;
-
 import java.lang.ref.WeakReference;
+
+import es.hotmail.pcasteres.elverol.data.ProductItem;
 
 public class DetalleNoLogPresenter implements DetalleNoLogContract.Presenter {
 
@@ -33,27 +33,16 @@ public class DetalleNoLogPresenter implements DetalleNoLogContract.Presenter {
     }
 
     @Override
-    public void fetchData() {
-        // Log.e(TAG, "fetchData()");
+    public void fetchDataProduct() {
+        // Log.e(TAG, "fetchDataProduct()");
 
         // set passed state
-        DetalleNoLogState state = router.getDataFromPreviousScreen();
-        if (state != null) {
-            viewModel.data = state.data;
+        ProductItem product = router.getDataFromProductListScreen();
+        if(product != null) {
+            viewModel.product = product;
         }
-
-        if (viewModel.data == null) {
-            // call the model
-            String data = model.fetchData();
-
-            // set initial state
-            viewModel.data = data;
-        }
-
-        // update the view
-        view.get().displayData(viewModel);
+        view.get().displayProductDetailData(viewModel);
 
     }
-
 
 }
