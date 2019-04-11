@@ -1,11 +1,15 @@
 package es.hotmail.pcasteres.elverol.ListaProductosLog;
 
-import android.util.Log;
-import android.content.Intent;
 import android.content.Context;
+import android.content.Intent;
+
+import es.hotmail.pcasteres.elverol.DetalleLog.DetalleLogActivity;
 import es.hotmail.pcasteres.elverol.app.AppMediator;
+import es.hotmail.pcasteres.elverol.data.CategoryItem;
+import es.hotmail.pcasteres.elverol.data.ProductItem;
 
 public class ListaProductosLogRouter implements ListaProductosLogContract.Router {
+
 
     public static String TAG = ListaProductosLogRouter.class.getSimpleName();
 
@@ -16,18 +20,25 @@ public class ListaProductosLogRouter implements ListaProductosLogContract.Router
     }
 
     @Override
-    public void navigateToNextScreen() {
+    public void navigateToDetalleLogScreen() {
         Context context = mediator.getApplicationContext();
-        Intent intent = new Intent(context, ListaProductosLogActivity.class);
+        Intent intent = new Intent(context, DetalleLogActivity.class);
         context.startActivity(intent);
     }
 
     @Override
-    public void passDataToNextScreen(ListaProductosLogState state) { }
+    public void passDataToDetalleLogActivity(ProductItem item) {
+        mediator.setProduct(item);
+    }
 
     @Override
     public ListaProductosLogState getDataFromPreviousScreen() {
         ListaProductosLogState state = mediator.getListaProductosLogState();
         return state;
+    }
+    @Override
+    public CategoryItem getDataFromPrincipalLog() {
+        CategoryItem category = mediator.getCategory();
+        return category;
     }
 }

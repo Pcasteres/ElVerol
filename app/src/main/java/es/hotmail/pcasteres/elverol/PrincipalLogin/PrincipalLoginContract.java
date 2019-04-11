@@ -2,12 +2,17 @@ package es.hotmail.pcasteres.elverol.PrincipalLogin;
 
 import java.lang.ref.WeakReference;
 
+import es.hotmail.pcasteres.elverol.data.CategoryItem;
+import es.hotmail.pcasteres.elverol.data.RepositoryContract;
+
 interface PrincipalLoginContract {
 
     interface View {
         void injectPresenter(Presenter presenter);
 
         void displayData(PrincipalLoginViewModel viewModel);
+
+        void displayCategoryListData(PrincipalLoginViewModel viewModel);
     }
 
     interface Presenter {
@@ -17,17 +22,23 @@ interface PrincipalLoginContract {
 
         void injectRouter(Router router);
 
-        void fetchData();
+        void fetchCategoryListData();
+
+        void selectProductListData(int item);
+
+        void selectProductListData(CategoryItem item);
     }
 
     interface Model {
-        String fetchData();
+
+        void fetchCategoryListData(
+                RepositoryContract.GetCategoryListCallback callback);
     }
 
     interface Router {
-        void navigateToNextScreen();
+        void navigateToListaProductosLoginScreen();
 
-        void passDataToNextScreen(PrincipalLoginState state);
+        void passDataToListaProductosLoginScreen(CategoryItem item);
 
         PrincipalLoginState getDataFromPreviousScreen();
     }

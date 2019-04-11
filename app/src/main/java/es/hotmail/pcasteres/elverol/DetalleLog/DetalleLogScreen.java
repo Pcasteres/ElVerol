@@ -1,8 +1,10 @@
 package es.hotmail.pcasteres.elverol.DetalleLog;
 
-import java.lang.ref.WeakReference;
-import es.hotmail.pcasteres.elverol.app.AppMediator;
 import android.support.v4.app.FragmentActivity;
+
+import java.lang.ref.WeakReference;
+
+import es.hotmail.pcasteres.elverol.app.AppMediator;
 
 public class DetalleLogScreen {
 

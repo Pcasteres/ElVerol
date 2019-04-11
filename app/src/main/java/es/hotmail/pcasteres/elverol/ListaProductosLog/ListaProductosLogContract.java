@@ -2,12 +2,18 @@ package es.hotmail.pcasteres.elverol.ListaProductosLog;
 
 import java.lang.ref.WeakReference;
 
+import es.hotmail.pcasteres.elverol.data.CategoryItem;
+import es.hotmail.pcasteres.elverol.data.ProductItem;
+import es.hotmail.pcasteres.elverol.data.RepositoryContract;
+
 interface ListaProductosLogContract {
 
     interface View {
         void injectPresenter(Presenter presenter);
 
         void displayData(ListaProductosLogViewModel viewModel);
+
+        void displayListaProductosLogData(ListaProductosLogViewModel viewModel);
     }
 
     interface Presenter {
@@ -17,18 +23,26 @@ interface ListaProductosLogContract {
 
         void injectRouter(Router router);
 
-        void fetchData();
+
+        void fetchListaProductosNoLogData();
+
+        void selectProductListData(ProductItem item);
     }
 
     interface Model {
-        String fetchData();
+
+        void fetchListaProductosLogData(
+                CategoryItem category, RepositoryContract.GetProductListCallback callback);
     }
 
     interface Router {
-        void navigateToNextScreen();
 
-        void passDataToNextScreen(ListaProductosLogState state);
+        void navigateToDetalleLogScreen();
+
+        void passDataToDetalleLogActivity(ProductItem item);
 
         ListaProductosLogState getDataFromPreviousScreen();
+
+        CategoryItem getDataFromPrincipalLog();
     }
 }

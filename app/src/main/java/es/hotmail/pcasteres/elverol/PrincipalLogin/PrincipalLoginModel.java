@@ -2,22 +2,35 @@ package es.hotmail.pcasteres.elverol.PrincipalLogin;
 
 import android.util.Log;
 
-import java.lang.ref.WeakReference;
-
-import android.support.v7.app.AppCompatActivity;
-import android.support.v4.app.FragmentActivity;
+import es.hotmail.pcasteres.elverol.data.RepositoryContract;
 
 public class PrincipalLoginModel implements PrincipalLoginContract.Model {
 
     public static String TAG = PrincipalLoginModel.class.getSimpleName();
 
-    public PrincipalLoginModel() {
+    private RepositoryContract repository;
+
+    public PrincipalLoginModel(RepositoryContract repository) {
+        this.repository = repository;
 
     }
 
     @Override
-    public String fetchData() {
-        // Log.e(TAG, "fetchData()");
-        return "Hello";
+    public void fetchCategoryListData(
+            final RepositoryContract.GetCategoryListCallback callback) {
+
+        Log.e(TAG, "fetchCategoryListData()");
+
+        repository.loadCatalog(new RepositoryContract.FetchCatalogDataCallback() {
+
+            @Override
+            public void onCatalogDataFetched(boolean error) {
+                if(!error) {
+                    repository.getCategoryList(callback);
+                }
+            }
+        });
+
     }
+
 }

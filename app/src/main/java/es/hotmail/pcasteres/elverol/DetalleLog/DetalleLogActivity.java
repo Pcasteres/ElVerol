@@ -1,9 +1,21 @@
 package es.hotmail.pcasteres.elverol.DetalleLog;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+import android.view.MenuItem;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.RequestBuilder;
+import com.bumptech.glide.RequestManager;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.request.RequestOptions;
 
 import es.hotmail.pcasteres.elverol.R;
+import es.hotmail.pcasteres.elverol.data.ProductItem;
 
 public class DetalleLogActivity
         extends AppCompatActivity implements DetalleLogContract.View {
@@ -21,15 +33,11 @@ public class DetalleLogActivity
 
         // do the setup
         DetalleLogScreen.configure(this);
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
 
         // do some work
-        presenter.fetchData();
+        presenter.fetchDataProduct();
     }
+
 
     @Override
     public void injectPresenter(DetalleLogContract.Presenter presenter) {
@@ -38,9 +46,46 @@ public class DetalleLogActivity
 
     @Override
     public void displayData(DetalleLogViewModel viewModel) {
-        //Log.e(TAG, "displayData()");
+
+    }
+
+
+    @Override
+    public void displayProductDetailData(DetalleLogViewModel viewModel) {
+        Log.e(TAG, "displayProductDetailData()");
 
         // deal with the data
-        //((TextView) findViewById(R.id.data)).setText(viewModel.data);
+        ProductItem product = viewModel.product;
+
+
+        ((TextView) findViewById(R.id.nombre)).setText(product.content);
+        ((TextView) findViewById(R.id.precio)).setText(product.precio);
+        ((TextView) findViewById(R.id.detalleProducto)).setText(product.details);
+            loadImageFromURL(
+                    (ImageView) findViewById(R.id.imagenDetalle),
+                    product.picture
+            );
+
+        }
+
+
+    private void loadImageFromURL(ImageView imageView, String imageUrl){
+        RequestManager reqManager = Glide.with(imageView.getContext());
+        RequestBuilder reqBuilder = reqManager.load(imageUrl);
+        RequestOptions reqOptions = new RequestOptions();
+        reqOptions.diskCacheStrategy(DiskCacheStrategy.ALL);
+        reqBuilder.apply(reqOptions);
+        reqBuilder.into(imageView);
+    }
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == android.R.id.home) {
+            navigateUpTo(new Intent(this, DetalleLogActivity.class));
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

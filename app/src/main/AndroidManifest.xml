@@ -37,9 +37,36 @@
             android:parentActivityName=".ListaProductosNoLog.ListaProductosNoLogActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".PrincipalNoLog.PrincipalNoLogActivity"/>
+                android:value=".ListaProductosNoLog.ListaProductosNoLogActivity"/>
         </activity>
-
+        <activity
+            android:name=".ListaProductosLog.ListaProductosLogActivity"
+            android:parentActivityName=".PrincipalLogin.PrincipalLoginActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".PrincipalLogin.PrincipalLoginActivity"/>
+        </activity>
+        <activity
+            android:name=".PrincipalLogin.PrincipalLoginActivity"
+            android:parentActivityName=".Login.LoginActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Login.LoginActivity"/>
+        </activity>
+        <activity
+            android:name=".DetalleLog.DetalleLogActivity"
+            android:parentActivityName=".ListaProductosLog.ListaProductosLogActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ListaProductosLog.ListaProductosLogActivity"/>
+        </activity>
+        <activity
+            android:name=".Login.LoginActivity"
+            android:parentActivityName=".ListaProductosNoLog.ListaProductosNoLogActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ListaProductosNoLog.ListaProductosNoLogActivity"/>
+        </activity>
 
     </application>
 

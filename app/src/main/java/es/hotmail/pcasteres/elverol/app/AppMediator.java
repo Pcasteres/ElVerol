@@ -3,8 +3,8 @@ package es.hotmail.pcasteres.elverol.app;
 import android.app.Application;
 
 import es.hotmail.pcasteres.elverol.Carrito.CarritoState;
-import es.hotmail.pcasteres.elverol.DetalleLog.DetalleLogState;
 import es.hotmail.pcasteres.elverol.DetalleNoLog.DetalleNoLogState;
+import es.hotmail.pcasteres.elverol.DetalleLog.DetalleLogState;
 import es.hotmail.pcasteres.elverol.ListaProductosLog.ListaProductosLogState;
 import es.hotmail.pcasteres.elverol.ListaProductosNoLog.ListaProductosNoLogState;
 import es.hotmail.pcasteres.elverol.Login.LoginState;

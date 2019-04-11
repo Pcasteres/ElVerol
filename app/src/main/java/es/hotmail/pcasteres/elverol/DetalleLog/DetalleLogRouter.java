@@ -1,9 +1,7 @@
 package es.hotmail.pcasteres.elverol.DetalleLog;
 
-import android.util.Log;
-import android.content.Intent;
-import android.content.Context;
 import es.hotmail.pcasteres.elverol.app.AppMediator;
+import es.hotmail.pcasteres.elverol.data.ProductItem;
 
 public class DetalleLogRouter implements DetalleLogContract.Router {
 
@@ -16,18 +14,8 @@ public class DetalleLogRouter implements DetalleLogContract.Router {
     }
 
     @Override
-    public void navigateToNextScreen() {
-        Context context = mediator.getApplicationContext();
-        Intent intent = new Intent(context, DetalleLogActivity.class);
-        context.startActivity(intent);
-    }
-
-    @Override
-    public void passDataToNextScreen(DetalleLogState state) {    }
-
-    @Override
-    public DetalleLogState getDataFromPreviousScreen() {
-        DetalleLogState state = mediator.getDetalleLogState();
-        return state;
+    public ProductItem getDataFromProductListScreen() {
+        ProductItem product = mediator.getProduct();
+        return product;
     }
 }

@@ -1,12 +1,17 @@
 package es.hotmail.pcasteres.elverol.PrincipalNoLog;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 
+import es.hotmail.pcasteres.elverol.Login.LoginActivity;
 import es.hotmail.pcasteres.elverol.R;
+import es.hotmail.pcasteres.elverol.app.AppMediator;
 import es.hotmail.pcasteres.elverol.data.CategoryItem;
 
 public class PrincipalNoLogActivity
@@ -15,7 +20,7 @@ public class PrincipalNoLogActivity
     public static String TAG = PrincipalNoLogActivity.class.getSimpleName();
 
     private PrincipalNoLogContract.Presenter presenter;
-
+    private AppMediator mediator;
     private PrincipalNoLogAdapter listAdapter;
 
     @Override
@@ -26,6 +31,15 @@ public class PrincipalNoLogActivity
         getSupportActionBar().hide();
         //inicializar los botones
         // do the setup
+        @SuppressLint("WrongViewCast") ImageView btn= (ImageView) findViewById(R.id.login1);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), LoginActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                v.getContext().startActivity(intent);
+            }
+        });
         listAdapter = new PrincipalNoLogAdapter(new View.OnClickListener() {
 
             @Override
@@ -65,6 +79,8 @@ public class PrincipalNoLogActivity
      //   ((TextView) findViewById(R.id.data)).setText(viewModel.data);
     }
 
+
+
     @Override
     public void displayCategoryListData(final PrincipalNoLogViewModel viewModel) {
             Log.e(TAG, "displayCategoryListData()");
@@ -81,4 +97,7 @@ public class PrincipalNoLogActivity
             });
     }
 
+    public void onLogClick(View view) {
+
+    }
 }

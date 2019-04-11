@@ -1,8 +1,10 @@
 package es.hotmail.pcasteres.elverol.PrincipalLogin;
 
-import android.util.Log;
-
 import java.lang.ref.WeakReference;
+import java.util.List;
+
+import es.hotmail.pcasteres.elverol.data.CategoryItem;
+import es.hotmail.pcasteres.elverol.data.RepositoryContract;
 
 public class PrincipalLoginPresenter implements PrincipalLoginContract.Presenter {
 
@@ -33,27 +35,36 @@ public class PrincipalLoginPresenter implements PrincipalLoginContract.Presenter
     }
 
     @Override
-    public void fetchData() {
-        // Log.e(TAG, "fetchData()");
+    public void fetchCategoryListData() {
+        // Log.e(TAG, "fetchCategoryListData()");
 
-        // set passed state
-        PrincipalLoginState state = router.getDataFromPreviousScreen();
-        if (state != null) {
-            viewModel.data = state.data;
-        }
+        // call the model
+        model.fetchCategoryListData(new RepositoryContract.GetCategoryListCallback() {
 
-        if (viewModel.data == null) {
-            // call the model
-            String data = model.fetchData();
+            @Override
+            public void setCategoryList(List<CategoryItem> categories) {
+                viewModel.categories = categories;
 
-            // set initial state
-            viewModel.data = data;
-        }
-
-        // update the view
-        view.get().displayData(viewModel);
+                view.get().displayCategoryListData(viewModel);
+            }
+        });
 
     }
+
+    @Override
+    public void selectProductListData(int item) {
+
+    }
+
+
+
+    @Override
+    public void selectProductListData(CategoryItem item) {
+
+        router.passDataToListaProductosLoginScreen(item);
+        router.navigateToListaProductosLoginScreen();
+    }
+
 
 
 }
