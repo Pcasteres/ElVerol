@@ -2,15 +2,16 @@ package es.hotmail.pcasteres.elverol.app;
 
 public class Carrito {
 
-private int id;
-private int compra;
-private int product_id;
-private int cantidad;
-private int User_id;
+    public int id;
+    public int product_id;
+    public String product_name;
+    public int cantidad;
+    public float precio;
+    public int User_id;
+
 
     public Carrito(int id, int compra, int product_id, int cantidad, int user_id) {
         this.id = id;
-        this.compra = compra;
         this.product_id = product_id;
         this.cantidad = cantidad;
         User_id = user_id;
@@ -24,13 +25,6 @@ private int User_id;
         this.id = id;
     }
 
-    public int getCompra() {
-        return compra;
-    }
-
-    public void setCompra(int compra) {
-        this.compra = compra;
-    }
 
     public int getProduct_id() {
         return product_id;

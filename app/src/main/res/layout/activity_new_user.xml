@@ -243,6 +243,12 @@
                 android:text="Correo"
                 android:textColor="@android:color/secondary_text_dark"/>
 
+            <Button
+                android:id="@+id/finReg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Finalizar Registro" />
+
 
         </LinearLayout>
     </ScrollView>

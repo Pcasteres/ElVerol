@@ -16,7 +16,7 @@
         {
           "id": 7,
           "content": "Reloj2",
-          "picture": "https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.creapromocion.com%2F14724-large_default%2Freloj-de-pared-publicitario-pierre-cardin-mundi.jpg&imgrefurl=https%3A%2F%2Fwww.creapromocion.com%2Fes%2Frelojes-de-pared-publicitarios%2F3965-reloj-de-pared-publicitario-pierre-cardin-mundi&docid=enTstg82jhoW7M&tbnid=_Y1zhggiEbuWkM%3A&vet=10ahUKEwieo4G1osXhAhWCx4UKHbAqCLIQMwiFAygWMBY..i&w=345&h=440&bih=596&biw=1280&q=relojes%20de%20pared&ved=0ahUKEwieo4G1osXhAhWCx4UKHbAqCLIQMwiFAygWMBY&iact=mrc&uact=8",
+          "picture": "https://www.creapromocion.com/14724-large_default/reloj-de-pared-publicitario-pierre-cardin-mundi.jpg",
           "details": "Detalles del objeto",
           "precio":"9.99",
           "stock": 15
@@ -52,20 +52,20 @@
     {
       "id": 3,
       "content": "Portavelas",
-      "image":"R.drawable.portavelasprincipal",
+      "image":"https://woodmoments.com/wp-content/uploads/2017/04/Troncos-portavelas0310.jpg",
       "products": [
         {
           "id": 3,
-          "content": "Beaches of Gran Canaria",
-          "picture": "https://www.planetware.com/photos-large/E/spain-gran-canaria-maspalomas-dunes.jpg",
+          "content": "portavelas 1",
+          "picture": "https://woodmoments.com/wp-content/uploads/2017/04/Troncos-portavelas0310.jpg",
           "details": "Detalles del objeto",
           "precio":"9.99",
           "stock": 76
         },
         {
           "id": 8,
-          "content": "Las Palmas de Gran Canaria",
-          "picture": "https://www.planetware.com/photos-large/E/amadores-beach-gran-canaria.jpg",
+          "content": "Portavelas 2",
+          "picture": "https://www.1000detalles.com/server/Portal_0008402/img/products/portavelas-de-cristal-con-asa-metalica_4585459.jpg",
           "details": "Detalles del objeto",
           "precio":"9.99",
           "stock": 91
@@ -76,20 +76,20 @@
     {
       "id": 4,
       "content": "Velas",
-      "image":"R.drawable.velaprincipal",
+      "image":"https://okdiario.com/img/2018/09/12/como-hacer-un-centro-de-mesa-con-velas-655x368.jpg",
       "products": [
         {
           "id": 6,
-          "content": "The Beaches of Fuerteventura",
-          "picture": "https://www.planetware.com/photos-large/E/spain-fuerteventura-playa-esmeralda.jpg",
+          "content": "velas1",
+          "picture": "https://okdiario.com/img/2018/09/12/como-hacer-un-centro-de-mesa-con-velas-655x368.jpg",
           "details": "Detalles del objeto",
           "precio":"9.99",
           "stock": 91
         },
         {
           "id": 9,
-          "content": "The Beaches of Fuerteventura",
-          "picture": "https://www.planetware.com/photos-large/E/spain-fuerteventura-playa-esmeralda.jpg",
+          "content": "velas2",
+          "picture": "https://okdiario.com/img/2018/09/12/como-hacer-un-centro-de-mesa-con-velas-655x368.jpg",
           "details": "Detalles del objeto",
           "precio":"9.99",
           "stock": 91

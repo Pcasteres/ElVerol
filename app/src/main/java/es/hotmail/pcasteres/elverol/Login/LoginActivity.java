@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import es.hotmail.pcasteres.elverol.NewUser.NewUserActivity;
 import es.hotmail.pcasteres.elverol.PrincipalLogin.PrincipalLoginActivity;
 import es.hotmail.pcasteres.elverol.R;
 import es.hotmail.pcasteres.elverol.app.AppMediator;
@@ -27,6 +28,15 @@ public class LoginActivity
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(v.getContext(), PrincipalLoginActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                v.getContext().startActivity(intent);
+            }
+        });
+        @SuppressLint("WrongViewCast") Button btn2= (Button) findViewById(R.id.registrarse);
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), NewUserActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 v.getContext().startActivity(intent);
             }

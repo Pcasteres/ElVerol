@@ -67,6 +67,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ListaProductosNoLog.ListaProductosNoLogActivity"/>
         </activity>
+        <activity
+            android:name=".NewUser.NewUserActivity"
+            android:parentActivityName=".Login.LoginActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Login.LoginActivity"/>
+        </activity>
+
 
     </application>
 

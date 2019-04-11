@@ -1,10 +1,12 @@
 package es.hotmail.pcasteres.elverol.DetalleNoLog;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -14,6 +16,7 @@ import com.bumptech.glide.RequestManager;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.RequestOptions;
 
+import es.hotmail.pcasteres.elverol.Login.LoginActivity;
 import es.hotmail.pcasteres.elverol.R;
 import es.hotmail.pcasteres.elverol.data.ProductItem;
 
@@ -30,7 +33,15 @@ public class DetalleNoLogActivity
         setContentView(R.layout.activity_detalle_no_log);
         //Código para eliminar el action bar
         getSupportActionBar().hide();
-
+        @SuppressLint("WrongViewCast") ImageView btn= (ImageView) findViewById(R.id.login);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), LoginActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                v.getContext().startActivity(intent);
+            }
+        });
         // do the setup
         DetalleNoLogScreen.configure(this);
 
