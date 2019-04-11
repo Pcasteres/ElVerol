@@ -1,122 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
     tools:context=".DetalleNoLog.DetalleNoLogActivity">
-
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorFondo2"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme">
-        <LinearLayout
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:background="@color/colorFondo2">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <ImageView
-                android:id="@+id/menu"
-                android:layout_width="30dp"
-                android:layout_height="32dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="12dp"
-                android:scaleType="fitXY"
-                android:src="@drawable/menu" />
-
-            <TextView
-                android:id="@+id/elVerol"
-                android:layout_width="280dp"
-                android:layout_height="60dp"
-                android:layout_marginTop="12dp"
-                android:fontFamily="@font/vogue"
-                android:text="EL VEROL"
-                android:textAlignment="center"
-                android:textColor="@android:color/black"
-                android:textSize="36sp" />
-
-            <ImageView
-                android:id="@+id/login"
-                android:layout_width="30dp"
-                android:layout_height="32dp"
-                android:layout_marginTop="12dp"
-                android:scaleType="fitXY"
-                android:src="@drawable/login" />
-        </LinearLayout>
-
-    </android.support.v7.widget.Toolbar>
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" >
-
-            <ImageView
-                android:id="@+id/imagendetalle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="72dp"
-                android:layout_marginTop="98dp"
-                android:scaleType="fitXY"
-                android:src="@drawable/reloj1" />
-
-            <TextView
-                android:id="@+id/nombre"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
-                android:fontFamily="@font/viceroy"
-                android:text="Nombre"
-                android:textColor="@android:color/black"
-                android:textSize="18sp" />
-
-            <TextView
-                android:id="@+id/detalleProducto"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
-                android:fontFamily="@font/viceroy"
-                android:text="Detalle dfasdfsadfsafsafsaf
-fasdfsadfsadf
-sadfasdfsaf
-sadfasdfasfd"
-                android:textColor="@android:color/black"
-                android:textSize="18sp" />
+            android:background="@color/colorFondo2"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:background="@color/colorFondo2">
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/menu"
+                    android:layout_width="30dp"
+                    android:layout_height="32dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="12dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/menu" />
 
                 <TextView
-                    android:id="@+id/preciotext"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:fontFamily="@font/viceroy"
-                    android:background="@color/colorFondo2"
-                    android:text="Precio:"
+                    android:id="@+id/elVerol"
+                    android:layout_width="280dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/vogue"
+                    android:text="EL VEROL"
+                    android:textAlignment="center"
                     android:textColor="@android:color/black"
-                    android:textSize="18sp" />
-                <TextView
-                    android:id="@+id/precio"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:fontFamily="@font/viceroy"
-                    android:text="Nombre"
-                    android:textColor="@android:color/black"
-                    android:textSize="18sp" />
+                    android:textSize="36sp" />
 
+                <ImageView
+                    android:id="@+id/login"
+                    android:layout_width="30dp"
+                    android:layout_height="32dp"
+                    android:layout_marginTop="12dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/login" />
             </LinearLayout>
-        </LinearLayout>
-    </ScrollView>
+
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="android.support.design.widget.AppBarLayout$ScrollingViewBehavior">
+
+        <include layout="@layout/product_detail"/>
+    </FrameLayout>
 
 
-</FrameLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

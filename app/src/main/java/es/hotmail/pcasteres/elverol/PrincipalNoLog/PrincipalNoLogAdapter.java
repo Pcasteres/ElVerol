@@ -70,28 +70,18 @@ public class PrincipalNoLogAdapter
     holder.itemView.setTag(itemList.get(position));
     holder.itemView.setOnClickListener(clickListener);
     holder.contentView.setText(itemList.get(position).content);
-
-    holder.imag.setText(itemList.get(position).image);
-    imagen=itemList.get(position).image;
+    loadImageFromURL(
+            (holder.imageView), itemList.get(position).image    );
   }
 
   class ViewHolder extends RecyclerView.ViewHolder {
     final TextView contentView;
-    final TextView imag;
     final ImageView imageView;
 
     ViewHolder(View view) {
       super(view);
       contentView = view.findViewById(R.id.content);
       imageView = view.findViewById(R.id.imagen);
-      imag = view.findViewById(R.id.imag);
-
-
-      ;
-      loadImageFromURL(
-              (ImageView) imageView,
-              (String) imag.getText()
-      );
 
     }
   }

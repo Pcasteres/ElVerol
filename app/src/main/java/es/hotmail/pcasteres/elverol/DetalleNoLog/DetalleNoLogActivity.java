@@ -62,7 +62,7 @@ public class DetalleNoLogActivity
         ((TextView) findViewById(R.id.precio)).setText(product.precio);
         ((TextView) findViewById(R.id.detalleProducto)).setText(product.details);
             loadImageFromURL(
-                    (ImageView) findViewById(R.id.imagendetalle),
+                    (ImageView) findViewById(R.id.imagenDetalle),
                     product.picture
             );
 
