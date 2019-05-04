@@ -1,6 +1,7 @@
 package es.hotmail.pcasteres.elverol.ListaProductosLog;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
@@ -8,8 +9,10 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.ListView;
 
+import es.hotmail.pcasteres.elverol.Carrito.CarritoActivity;
 import es.hotmail.pcasteres.elverol.R;
 import es.hotmail.pcasteres.elverol.data.CategoryItem;
 import es.hotmail.pcasteres.elverol.data.ProductItem;
@@ -29,6 +32,15 @@ public class ListaProductosLogActivity
         setContentView(R.layout.activity_lista_productos_log);
         //Código para eliminar el action bar
         getSupportActionBar().hide();
+        @SuppressLint("WrongViewCast") ImageView btn= (ImageView) findViewById(R.id.carrito);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), CarritoActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                v.getContext().startActivity(intent);
+            }
+        });
         //findViewById(R.id.Loginprincipal1).setOnClickListener(this);
         // do the setup
 

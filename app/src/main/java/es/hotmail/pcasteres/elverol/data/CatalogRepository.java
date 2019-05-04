@@ -24,12 +24,18 @@ public class CatalogRepository implements RepositoryContract {
 
 
   public static final String JSON_FILE = "Verol.json";
-  public static final String JSON_ROOT = "categories";
+  public static final String JSON_ROOT_cat = "categories";
+  public static final String JSON_ROOT_us = "Users";
+  public static final String JSON_ROOT_fac = "Facturas";
+  public static final String JSON_ROOT_car = "Carritos";
 
   private static CatalogRepository INSTANCE;
 
   private Context context;
   private List<CategoryItem> categories;
+  private List<CarritoItem> carrito;
+  private List<FacturaItem> facturaItems;
+  private List<UserItem> userItems;
 
   public static RepositoryContract getInstance(Context context) {
     if(INSTANCE == null){
@@ -89,6 +95,8 @@ public class CatalogRepository implements RepositoryContract {
 
 
 
+
+
   @Override
   public void getProduct(final int id, final GetProductCallback callback) {
 
@@ -98,6 +106,19 @@ public class CatalogRepository implements RepositoryContract {
       public void run() {
         if(callback != null) {
           callback.setProduct(loadProduct(id));
+        }
+      }
+    });
+  }
+  @Override
+  public void getUser(final String usuario, final String password, final GetUserCallback callback) {
+
+    AsyncTask.execute(new Runnable() {
+
+      @Override
+      public void run() {
+        if(callback != null) {
+          callback.setUser(loadUser(usuario,password));
         }
       }
     });
@@ -149,14 +170,20 @@ public class CatalogRepository implements RepositoryContract {
     try {
 
       JSONObject jsonObject = new JSONObject(json);
-      JSONArray jsonArray = jsonObject.getJSONArray(JSON_ROOT);
+      JSONArray jsonArraycat = jsonObject.getJSONArray(JSON_ROOT_cat);
+      JSONArray jsonArraycar = jsonObject.getJSONArray(JSON_ROOT_car);
+      JSONArray jsonArrayus = jsonObject.getJSONArray(JSON_ROOT_us);
+      JSONArray jsonArrayfac = jsonObject.getJSONArray(JSON_ROOT_fac);
 
       categories = new ArrayList();
+      carrito = new ArrayList();
+      userItems = new ArrayList();
+      facturaItems = new ArrayList();
 
-      if (jsonArray.length() > 0) {
+      if (jsonArraycat.length() > 0) {
 
         final List<CategoryItem> categories = Arrays.asList(
-                gson.fromJson(jsonArray.toString(), CategoryItem[].class)
+                gson.fromJson(jsonArraycat.toString(), CategoryItem[].class)
         );
 
 
@@ -169,6 +196,20 @@ public class CatalogRepository implements RepositoryContract {
             product.categoryId = category.id;
 
           }
+        }
+
+        return true;
+      }
+
+      if (jsonArraycar.length() > 0) {
+
+        final List<CarritoItem> carrito = Arrays.asList(
+                gson.fromJson(jsonArraycar.toString(), CarritoItem[].class)
+        );
+
+
+        for (CarritoItem carritoo: carrito) {
+          insertCarrito(carritoo);
         }
 
         return true;
@@ -220,7 +261,7 @@ public class CatalogRepository implements RepositoryContract {
   private ProductItem loadProduct(int id) {
     for (CategoryItem category: categories) {
       for (ProductItem product: category.items) {
-        if(product.id == id) {
+        if(product.idProducts == id) {
           return product;
         }
       }
@@ -239,12 +280,68 @@ public class CatalogRepository implements RepositoryContract {
     return null;
   }
 
+  private CarritoItem loadCarrito(int id) {
+    for (CarritoItem carritoItem: carrito) {
+      if(carritoItem.id == id) {
+        return carritoItem;
+      }
+    }
+
+    return null;
+  }
+
+  private FacturaItem loadFactura(int id) {
+    for (FacturaItem facturaItem: facturaItems) {
+      if(facturaItem.id == id) {
+        return facturaItem;
+      }
+    }
+
+    return null;
+  }
+
+
+  private UserItem loadUser(String usu, String pass) {
+    for (UserItem userItem: userItems) {
+      if(userItem.usuario == usu && userItem.password == pass ) {
+        return userItem;
+      }
+    }
+
+    return null;
+  }
+
+
   private void insertCategory(CategoryItem category) {
     categories.add(category);
   }
 
+  private void insertCarrito(CarritoItem carritoo) {
+    carrito.add(carritoo);
+  }
+
+  private void insertUser(UserItem userItem) {
+    userItems.add(userItem);
+  }
+
+  private void insertFactura(FacturaItem facturaItem) {
+    facturaItems.add(facturaItem);
+  }
+
   private List<CategoryItem> loadCategories() {
     return categories;
+  }
+
+  private List<CarritoItem> loadCarrito() {
+    return carrito;
+  }
+
+  private List<UserItem> loadUser() {
+    return userItems;
+  }
+
+  private List<FacturaItem> loadFactura() {
+    return facturaItems;
   }
 
 }

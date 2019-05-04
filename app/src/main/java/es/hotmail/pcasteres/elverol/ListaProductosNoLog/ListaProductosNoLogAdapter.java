@@ -59,7 +59,7 @@ public class ListaProductosNoLogAdapter
   public void onBindViewHolder(final ListaProductosNoLogAdapter.ViewHolder holder, int position) {
     holder.itemView.setTag(itemList.get(position));
     holder.itemView.setOnClickListener(clickListener);
-    holder.contentView.setText(itemList.get(position).content);
+    holder.contentView.setText(itemList.get(position).name);
     loadImageFromURL(
             (holder.imageView), itemList.get(position).picture    );
   }

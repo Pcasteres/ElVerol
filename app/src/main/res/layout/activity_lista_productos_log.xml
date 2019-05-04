@@ -46,7 +46,7 @@
                     android:textSize="36sp" />
 
                 <ImageView
-                    android:id="@+id/login"
+                    android:id="@+id/carrito"
                     android:layout_width="30dp"
                     android:layout_height="32dp"
                     android:layout_marginTop="12dp"

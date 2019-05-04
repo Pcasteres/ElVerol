@@ -74,6 +74,13 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Login.LoginActivity"/>
         </activity>
+        <activity
+            android:name=".Carrito.CarritoActivity"
+            android:parentActivityName=".PrincipalLogin.PrincipalLoginActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".PrincipalLogin.PrincipalLoginActivity"/>
+        </activity>
 
 
     </application>

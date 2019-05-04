@@ -146,5 +146,39 @@
 
       ]
     }
+  ],
+  "Users":[
+    {
+      "idUser": 1,
+      "nombre": "admin",
+      "usuario": "admin",
+      "password":1234,
+      "municipio": "galdar",
+      "telefono":666999888,
+      "direccion":"calle la pantomima",
+      "correo": "asdfsaffsdf@hotmail.com",
+      "postcode":35460
+      }
+
+  ],
+  "Facturas":[
+    {
+      "idFactura": 1,
+      "idUser":1,
+      "Fecha":"09/04/2019",
+      "Hora":"20:00:00",
+      "estado":"comprando",
+      "total":"19.98"
+    }
+
+  ],
+  "Carritos":[
+    {
+      "idCarrito": 1,
+      "idFactura": 1,
+      "idObjeto":1,
+      "cantidad":2
+    }
+
   ]
 }

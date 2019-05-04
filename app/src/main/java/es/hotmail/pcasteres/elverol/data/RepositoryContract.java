@@ -16,6 +16,10 @@ public interface RepositoryContract {
     void setProduct(ProductItem product);
   }
 
+  interface GetUserCallback {
+    void setUser(UserItem user);
+  }
+
   interface GetCategoryListCallback {
     void setCategoryList(List<CategoryItem> categories);
   }
@@ -32,6 +36,9 @@ public interface RepositoryContract {
 
   void getProductList(int categoryId, CatalogRepository.GetProductListCallback callback);
   void getProduct(int id, CatalogRepository.GetProductCallback callback);
+
+  void getUser(String usuario, String password, GetUserCallback callback);
+
   void getCategory(int id, CatalogRepository.GetCategoryCallback callback);
   void getCategoryList(CatalogRepository.GetCategoryListCallback callback);
 
