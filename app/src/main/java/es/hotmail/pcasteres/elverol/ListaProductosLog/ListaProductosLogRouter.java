@@ -3,9 +3,11 @@ package es.hotmail.pcasteres.elverol.ListaProductosLog;
 import android.content.Context;
 import android.content.Intent;
 
+import es.hotmail.pcasteres.elverol.Carrito.CarritoActivity;
 import es.hotmail.pcasteres.elverol.DetalleLog.DetalleLogActivity;
 import es.hotmail.pcasteres.elverol.app.AppMediator;
 import es.hotmail.pcasteres.elverol.data.CategoryItem;
+import es.hotmail.pcasteres.elverol.data.FacturaItem;
 import es.hotmail.pcasteres.elverol.data.ProductItem;
 
 public class ListaProductosLogRouter implements ListaProductosLogContract.Router {
@@ -27,8 +29,21 @@ public class ListaProductosLogRouter implements ListaProductosLogContract.Router
     }
 
     @Override
+    public void navigateToCarritoScreen() {
+        Context context = mediator.getApplicationContext();
+        Intent intent = new Intent(context, CarritoActivity.class);
+        context.startActivity(intent);
+    }
+
+
+    @Override
     public void passDataToDetalleLogActivity(ProductItem item) {
         mediator.setProduct(item);
+    }
+
+    @Override
+    public void passDataToCarritoActivity(FacturaItem item) {
+        mediator.setFactura(item);
     }
 
     @Override

@@ -21,7 +21,7 @@ public class PrincipalLoginModel implements PrincipalLoginContract.Model {
 
         Log.e(TAG, "fetchCategoryListData()");
 
-        repository.loadCatalog(new RepositoryContract.FetchCatalogDataCallback() {
+        repository.loadCatalog(true, new RepositoryContract.FetchCatalogDataCallback() {
 
             @Override
             public void onCatalogDataFetched(boolean error) {

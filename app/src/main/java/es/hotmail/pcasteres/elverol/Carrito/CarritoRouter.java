@@ -1,8 +1,8 @@
 package es.hotmail.pcasteres.elverol.Carrito;
 
-import android.util.Log;
-import android.content.Intent;
 import android.content.Context;
+import android.content.Intent;
+
 import es.hotmail.pcasteres.elverol.app.AppMediator;
 
 public class CarritoRouter implements CarritoContract.Router {
@@ -28,8 +28,8 @@ public class CarritoRouter implements CarritoContract.Router {
     }
 
     @Override
-    public CarritoState getDataFromPreviousScreen() {
-        CarritoState state = mediator.getCarritoState();
-        return state;
+    public int getDataFromPreviousScreen() {
+        int facturaItem = mediator.getUser();
+        return facturaItem;
     }
 }

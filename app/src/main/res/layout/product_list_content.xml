@@ -17,7 +17,7 @@
     <ImageView
         android:id="@+id/imagen1"
         android:layout_width="126dp"
-        android:layout_height="91dp"
+        android:layout_height="126dp"
         android:layout_marginLeft="36dp"
         android:scaleType="fitXY" />
     <TextView

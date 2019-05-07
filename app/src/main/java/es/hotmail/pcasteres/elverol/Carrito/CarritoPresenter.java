@@ -1,8 +1,10 @@
 package es.hotmail.pcasteres.elverol.Carrito;
 
-import android.util.Log;
-
 import java.lang.ref.WeakReference;
+import java.util.List;
+
+import es.hotmail.pcasteres.elverol.data.CarritoItem;
+import es.hotmail.pcasteres.elverol.data.RepositoryContract;
 
 public class CarritoPresenter implements CarritoContract.Presenter {
 
@@ -37,21 +39,23 @@ public class CarritoPresenter implements CarritoContract.Presenter {
         // Log.e(TAG, "fetchData()");
 
         // set passed state
-        CarritoState state = router.getDataFromPreviousScreen();
-        if (state != null) {
-            viewModel.data = state.data;
+        int userid = router.getDataFromPreviousScreen();
+
+        if (userid != 0) {
+            viewModel.userid = userid;
         }
 
-        if (viewModel.data == null) {
-            // call the model
-            String data = model.fetchData();
+        // call the model
+        model.fetchData(viewModel.userid,
+                new RepositoryContract.GetCarritoListCallback() {
 
-            // set initial state
-            viewModel.data = data;
-        }
+                    @Override
+                    public void setCarritoList(List<CarritoItem> products) {
+                        viewModel.Carritoo = products;
 
-        // update the view
-        view.get().displayData(viewModel);
+                        view.get().displayData(viewModel);
+                    }
+                });
 
     }
 

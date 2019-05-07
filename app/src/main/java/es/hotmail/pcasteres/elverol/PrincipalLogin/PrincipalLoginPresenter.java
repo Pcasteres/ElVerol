@@ -61,8 +61,16 @@ public class PrincipalLoginPresenter implements PrincipalLoginContract.Presenter
     @Override
     public void selectProductListData(CategoryItem item) {
 
-        router.passDataToListaProductosLoginScreen(item);
+        router.passDataToListaProductosLoginScreen(item,1);
         router.navigateToListaProductosLoginScreen();
+    }
+
+    @Override
+    public void selectCarritoListData(){
+
+        router.passDataToCarritoScreen(1);
+        router.navigateToCarritoScreen();
+
     }
 
 

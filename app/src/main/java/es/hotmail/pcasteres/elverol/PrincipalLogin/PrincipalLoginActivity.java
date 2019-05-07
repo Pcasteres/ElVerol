@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
@@ -29,7 +30,7 @@ public class PrincipalLoginActivity
         setContentView(R.layout.activity_principal_login);
         //Código para eliminar el action bar
         getSupportActionBar().hide();
-        @SuppressLint("WrongViewCast") ImageView btn= (ImageView) findViewById(R.id.carrito);
+        @SuppressLint("WrongViewCast") ImageView btn= (ImageView) findViewById(R.id.carritoa);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -51,6 +52,8 @@ public class PrincipalLoginActivity
 
                 RecyclerView recyclerView = findViewById(R.id.category_list);
         recyclerView.setAdapter(listAdapter);
+        GridLayoutManager layoutManager = new GridLayoutManager(this, 2);
+        recyclerView.setLayoutManager(layoutManager);
 
         // do the setup
         PrincipalLoginScreen.configure(this);

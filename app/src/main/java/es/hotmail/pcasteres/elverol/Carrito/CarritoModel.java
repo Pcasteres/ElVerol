@@ -2,22 +2,23 @@ package es.hotmail.pcasteres.elverol.Carrito;
 
 import android.util.Log;
 
-import java.lang.ref.WeakReference;
-
-import android.support.v7.app.AppCompatActivity;
-import android.support.v4.app.FragmentActivity;
+import es.hotmail.pcasteres.elverol.data.RepositoryContract;
 
 public class CarritoModel implements CarritoContract.Model {
 
     public static String TAG = CarritoModel.class.getSimpleName();
 
-    public CarritoModel() {
+    private RepositoryContract repository;
 
+    public CarritoModel(RepositoryContract repository){
+        this.repository = repository;
     }
 
     @Override
-    public String fetchData() {
-        // Log.e(TAG, "fetchData()");
-        return "Hello";
+    public void fetchData(
+            int category, RepositoryContract.GetCarritoListCallback callback) {
+
+        Log.e(TAG, "fetchProductListData()");
+        repository.getcarritoList(category, callback);
     }
 }

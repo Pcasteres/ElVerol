@@ -4,6 +4,7 @@ import java.lang.ref.WeakReference;
 
 import es.hotmail.pcasteres.elverol.data.CategoryItem;
 import es.hotmail.pcasteres.elverol.data.RepositoryContract;
+import es.hotmail.pcasteres.elverol.data.UserItem;
 
 interface PrincipalLoginContract {
 
@@ -27,6 +28,8 @@ interface PrincipalLoginContract {
         void selectProductListData(int item);
 
         void selectProductListData(CategoryItem item);
+
+        void selectCarritoListData();
     }
 
     interface Model {
@@ -38,7 +41,13 @@ interface PrincipalLoginContract {
     interface Router {
         void navigateToListaProductosLoginScreen();
 
-        void passDataToListaProductosLoginScreen(CategoryItem item);
+        void navigateToCarritoScreen();
+
+        void passDataToListaProductosLoginScreen(CategoryItem item, UserItem userItem);
+
+        void passDataToCarritoScreen(int userItem);
+
+        void passDataToListaProductosLoginScreen(CategoryItem item, int userItem);
 
         PrincipalLoginState getDataFromPreviousScreen();
     }

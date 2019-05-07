@@ -2,6 +2,9 @@ package es.hotmail.pcasteres.elverol.Login;
 
 import java.lang.ref.WeakReference;
 
+import es.hotmail.pcasteres.elverol.data.RepositoryContract;
+import es.hotmail.pcasteres.elverol.data.UserItem;
+
 interface LoginContract {
 
     interface View {
@@ -21,13 +24,17 @@ interface LoginContract {
     }
 
     interface Model {
+
+        void fetchLoginData(
+                String user, String pass, RepositoryContract.GetUserCallback callback);
+
         String fetchData();
     }
 
     interface Router {
         void navigateToNextScreen();
 
-        void passDataToNextScreen(LoginState state);
+        void passDataToNextScreen(UserItem userItem);
 
         LoginState getDataFromPreviousScreen();
     }

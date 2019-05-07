@@ -1,7 +1,13 @@
 package es.hotmail.pcasteres.elverol.data;
 
+
+import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.PrimaryKey;
+
+@Entity(tableName = "Users")
 public class UserItem {
-    public int id;
+    @PrimaryKey
+    public int idUser;
     public String nombre;
     public String usuario;
     public String password;

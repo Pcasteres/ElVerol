@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
@@ -51,6 +52,8 @@ public class PrincipalNoLogActivity
 
                 RecyclerView recyclerView = findViewById(R.id.category_list);
         recyclerView.setAdapter(listAdapter);
+        GridLayoutManager layoutManager = new GridLayoutManager(this, 2);
+        recyclerView.setLayoutManager(layoutManager);
 
         // do the setup
         PrincipalNoLogScreen.configure(this);

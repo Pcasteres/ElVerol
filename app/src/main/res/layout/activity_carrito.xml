@@ -21,10 +21,12 @@
             android:background="@color/colorFondo2"
             android:minHeight="?attr/actionBarSize"
             android:theme="?attr/actionBarTheme">
+
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:orientation="horizontal">
+
                 <ImageView
                     android:id="@+id/menu"
                     android:layout_width="30dp"
@@ -45,44 +47,50 @@
                     android:textColor="@android:color/black"
                     android:textSize="36sp" />
 
+
             </LinearLayout>
 
         </android.support.v7.widget.Toolbar>
     </android.support.design.widget.AppBarLayout>
-
-    <TextView
-        android:id="@+id/objetos"
-        android:layout_width="83dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="70dp"
-        android:fontFamily="@font/vogue"
-        android:text="Objeto"
-        android:textColor="@android:color/black"
-        android:textSize="19sp" />
-
-    <TextView
-    android:id="@+id/cantidad"
-    android:layout_width="100dp"
+        android:orientation="vertical"
+        app:layout_behavior="android.support.design.widget.AppBarLayout$ScrollingViewBehavior">
+    <LinearLayout
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginLeft="190dp"
-    android:layout_marginTop="70dp"
-    android:fontFamily="@font/vogue"
-    android:text="Cantidad"
-    android:textColor="@android:color/black"
-    android:textSize="19sp" />
+    android:orientation="horizontal">
+            <TextView
+                android:id="@+id/objetos"
+                android:layout_width="83dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/vogue"
+                android:text="Objeto"
+                android:textColor="@android:color/black"
+                android:textSize="19sp" />
 
-    <TextView
-        android:id="@+id/precio"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="290dp"
-        android:layout_marginTop="70dp"
-        android:fontFamily="@font/vogue"
-        android:text="Precio"
-        android:textColor="@android:color/black"
-        android:textSize="19sp" />
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/cantidad"
+                android:fontFamily="@font/vogue"
+                android:layout_marginLeft="10dp"
+                android:text="Cantidad"
+                android:textColor="@android:color/black"
+                android:textSize="19sp" />
 
+            <TextView
+                android:id="@+id/precio"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/vogue"
+                android:text="Precio"
+                android:textColor="@android:color/black"
+                android:textSize="19sp" />
+    </LinearLayout>
         <FrameLayout
             android:id="@+id/frameLayout"
             android:layout_width="match_parent"
@@ -90,35 +98,34 @@
             android:layout_marginTop="20dp"
             app:layout_behavior="android.support.design.widget.AppBarLayout$ScrollingViewBehavior">
 
-            <include layout="@layout/category_list" />
+            <include layout="@layout/carrito_list" />
         </FrameLayout>
-
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
     <Button
         android:id="@+id/finalizar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="125dp"
-        android:layout_marginTop="650dp"
         android:fontFamily="@font/vogue"
         android:text="Finalizar"
         android:textSize="18sp" />
 
     <Button
         android:id="@+id/continuarcompra"
-        android:layout_width="118dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="210dp"
-        android:layout_marginTop="600dp"
         android:fontFamily="@font/vogue"
         android:text="Continuar compra"
         android:textSize="18sp" />
     <Button
         android:id="@+id/eliminararticulo"
-        android:layout_width="118dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="600dp"
         android:fontFamily="@font/vogue"
         android:text="Eliminar"
         android:textSize="18sp" />
+    </LinearLayout>
+    </LinearLayout>
 </android.support.design.widget.CoordinatorLayout>

@@ -21,7 +21,7 @@ public class ListaProductosNoLogModel implements ListaProductosNoLogContract.Mod
     public void fetchListaProductosNoLogData(
             CategoryItem category, RepositoryContract.GetProductListCallback callback) {
 
-        Log.e(TAG, "fetchProductListData()");
+        Log.e(TAG, "fetchListaProductosNoLogData()");
         repository.getProductList(category, callback);
     }
 

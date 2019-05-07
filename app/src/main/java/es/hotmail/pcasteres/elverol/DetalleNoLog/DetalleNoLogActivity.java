@@ -69,7 +69,7 @@ public class DetalleNoLogActivity
         ProductItem product = viewModel.product;
 
 
-        ((TextView) findViewById(R.id.nombre)).setText(product.content);
+        ((TextView) findViewById(R.id.nombre)).setText(product.name);
         ((TextView) findViewById(R.id.precio)).setText(product.precio);
         ((TextView) findViewById(R.id.detalleProducto)).setText(product.details);
             loadImageFromURL(

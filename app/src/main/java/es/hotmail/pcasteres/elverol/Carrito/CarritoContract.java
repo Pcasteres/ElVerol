@@ -2,6 +2,8 @@ package es.hotmail.pcasteres.elverol.Carrito;
 
 import java.lang.ref.WeakReference;
 
+import es.hotmail.pcasteres.elverol.data.RepositoryContract;
+
 interface CarritoContract {
 
     interface View {
@@ -21,7 +23,11 @@ interface CarritoContract {
     }
 
     interface Model {
-        String fetchData();
+
+       // void fetchData(FacturaItem facturaItem, RepositoryContract.GetCarritoListCallback getCarritoListCallback);
+
+        void fetchData(
+                int category, RepositoryContract.GetCarritoListCallback callback);
     }
 
     interface Router {
@@ -29,6 +35,6 @@ interface CarritoContract {
 
         void passDataToNextScreen(CarritoState state);
 
-        CarritoState getDataFromPreviousScreen();
+        int getDataFromPreviousScreen();
     }
 }

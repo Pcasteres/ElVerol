@@ -1,9 +1,14 @@
 package es.hotmail.pcasteres.elverol.Carrito;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.RecyclerView;
+import android.util.Log;
+import android.view.View;
 
 import es.hotmail.pcasteres.elverol.R;
+import es.hotmail.pcasteres.elverol.data.CarritoItem;
 
 public class CarritoActivity
         extends AppCompatActivity implements CarritoContract.View {
@@ -11,6 +16,7 @@ public class CarritoActivity
     public static String TAG = CarritoActivity.class.getSimpleName();
 
     private CarritoContract.Presenter presenter;
+    private CarritoAdapter listAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,18 +25,23 @@ public class CarritoActivity
 
         //Código para eliminar el action bar
         getSupportActionBar().hide();
+        listAdapter = new CarritoAdapter(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                CarritoItem item = (CarritoItem) view.getTag();
+            }
+        });
+
+        @SuppressLint("WrongViewCast") RecyclerView recyclerView = findViewById(R.id.carrito_list);
+        recyclerView.setAdapter(listAdapter);
 
         // do the setup
         CarritoScreen.configure(this);
-    }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-
-        // do some work
         presenter.fetchData();
     }
+
 
     @Override
     public void injectPresenter(CarritoContract.Presenter presenter) {
@@ -39,7 +50,7 @@ public class CarritoActivity
 
     @Override
     public void displayData(CarritoViewModel viewModel) {
-        //Log.e(TAG, "displayData()");
+        Log.e(TAG, "displayDataCarrito()");
 
         // deal with the data
         //((TextView) findViewById(R.id.data)).setText(viewModel.data);

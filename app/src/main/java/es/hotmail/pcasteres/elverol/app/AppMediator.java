@@ -3,15 +3,17 @@ package es.hotmail.pcasteres.elverol.app;
 import android.app.Application;
 
 import es.hotmail.pcasteres.elverol.Carrito.CarritoState;
-import es.hotmail.pcasteres.elverol.DetalleNoLog.DetalleNoLogState;
 import es.hotmail.pcasteres.elverol.DetalleLog.DetalleLogState;
+import es.hotmail.pcasteres.elverol.DetalleNoLog.DetalleNoLogState;
 import es.hotmail.pcasteres.elverol.ListaProductosLog.ListaProductosLogState;
 import es.hotmail.pcasteres.elverol.ListaProductosNoLog.ListaProductosNoLogState;
 import es.hotmail.pcasteres.elverol.Login.LoginState;
 import es.hotmail.pcasteres.elverol.NewUser.NewUserState;
 import es.hotmail.pcasteres.elverol.PrincipalLogin.PrincipalLoginState;
 import es.hotmail.pcasteres.elverol.PrincipalNoLog.PrincipalNoLogState;
+import es.hotmail.pcasteres.elverol.data.CarritoItem;
 import es.hotmail.pcasteres.elverol.data.CategoryItem;
+import es.hotmail.pcasteres.elverol.data.FacturaItem;
 import es.hotmail.pcasteres.elverol.data.ProductItem;
 
 public class AppMediator extends Application {
@@ -36,10 +38,13 @@ public class AppMediator extends Application {
 
     private int categoria;
     //private Product product;
-    private User user;
-    private Carrito carrito;
+    private int user;
+    private CarritoItem carrito;
     private CategoryItem category;
     private ProductItem product;
+    private FacturaItem facturaItem;
+
+    public FacturaItem facturaItem2;
 
     public PrincipalLoginState getPrincipalLoginState() {
         return principalLoginState;
@@ -77,8 +82,14 @@ public class AppMediator extends Application {
         return category;
     }
 
+    public FacturaItem getFacturaItem() { return facturaItem;}
+
     public void setCategory(CategoryItem category) {
         this.category = category;
+    }
+
+    public void setFactura(FacturaItem factura) {
+        this.facturaItem = factura;
     }
 
     public ProductItem getProduct() {
@@ -92,25 +103,25 @@ public class AppMediator extends Application {
         product = item;
     }
 
-    public User getUser() {
-        User item = user;
+    public int getUser() {
+        int item = user;
         //product = null;
         return item;
     }
 
 
-    public void setUser(User item) { user= item; }
+    public void setUser(int item) { user= item; }
 
 
 
-    public Carrito getCarrito() {
-        Carrito item = carrito;
+    public CarritoItem getCarrito() {
+        CarritoItem item = carrito;
         //product = null;
         return item;
     }
 
 
-    public void setCarrito(Carrito item) { carrito= item; }
+    public void setCarrito(CarritoItem item) { carrito= item; }
 
 }
 

@@ -7,7 +7,7 @@
       "products": [
         {
           "id": 1,
-          "content": "Reloj",
+          "name": "Reloj",
           "picture": "https://www.things-store.es/4823-large_default/reloj-de-pared-madera-40-cm.jpg",
           "details": "Detalles del objeto",
           "precio":"9.99",
@@ -15,7 +15,7 @@
         },
         {
           "id": 7,
-          "content": "Reloj2",
+          "name": "Reloj2",
           "picture": "https://www.creapromocion.com/14724-large_default/reloj-de-pared-publicitario-pierre-cardin-mundi.jpg",
           "details": "Detalles del objeto",
           "precio":"9.99",
@@ -27,20 +27,20 @@
     {
       "id": 2,
       "content": "Exterior",
-      "image":"https://www.planetware.com/photos-large/E/spain-lanzarote-timanfaya-volcanic-landscape.jpg",
+      "image":"https://imgredirect.milanuncios.com/fg/2132/90/mesas/Mesa-de-marmol-conjuntos-jardin-mosaico-213290866_1.jpg",
       "products": [
         {
           "id": 2,
-          "content": "Exterior1",
-          "picture": "https://www.planetware.com/photos-large/E/spain-lanzarote-timanfaya-volcanic-landscape.jpg",
+          "name": "Exterior1",
+          "picture": "https://imgredirect.milanuncios.com/fg/2132/90/mesas/Mesa-de-marmol-conjuntos-jardin-mosaico-213290866_1.jpg",
           "details": "Detalles del objeto",
           "precio":"9.99",
           "stock": 9
         },
         {
           "id": 12,
-          "content": "Exterior2",
-          "picture": "https://www.planetware.com/photos-large/E/spain-lanzarote-cueva-de-los-verdes.jpg",
+          "name": "Exterior2",
+          "picture": "https://images.ssstatic.com/liquidacion-mesas-y-sillas-de-jardin-saldo-4670525z0-00000067.jpg",
           "details": "One of the most popular things to do on Lanzarote is to explore the seven-kilometer-long volcanic tube that extends from La Coruna mountain to the sea. These tubes were formed when the surface of a lava flow cooled and hardened while the molten river of lava still flowed beneath it. When the subterranean lava emptied into the ocean, it left the hollow tube deep underground. The two kilometers inside of the cave you can tour is in its original state - the only things that have been added are lights and walkways for safety. You enter the caves through a jameo - a hole created by the collapse of a thin place in the roof of the lava tube. Some of the larger chambers are as high as nine to 12 meters. The stone of the walls is red, orange, and black, formed by compounds such as iron oxide and calcium carbonate in the stone.",
           "details": "Detalles del objeto",
           "precio":"9.99",
@@ -56,7 +56,7 @@
       "products": [
         {
           "id": 3,
-          "content": "portavelas 1",
+          "name": "portavelas 1",
           "picture": "https://woodmoments.com/wp-content/uploads/2017/04/Troncos-portavelas0310.jpg",
           "details": "Detalles del objeto",
           "precio":"9.99",
@@ -64,7 +64,7 @@
         },
         {
           "id": 8,
-          "content": "Portavelas 2",
+          "name": "Portavelas 2",
           "picture": "https://www.1000detalles.com/server/Portal_0008402/img/products/portavelas-de-cristal-con-asa-metalica_4585459.jpg",
           "details": "Detalles del objeto",
           "precio":"9.99",
@@ -80,7 +80,7 @@
       "products": [
         {
           "id": 6,
-          "content": "velas1",
+          "name": "velas1",
           "picture": "https://okdiario.com/img/2018/09/12/como-hacer-un-centro-de-mesa-con-velas-655x368.jpg",
           "details": "Detalles del objeto",
           "precio":"9.99",
@@ -88,7 +88,7 @@
         },
         {
           "id": 9,
-          "content": "velas2",
+          "name": "velas2",
           "picture": "https://okdiario.com/img/2018/09/12/como-hacer-un-centro-de-mesa-con-velas-655x368.jpg",
           "details": "Detalles del objeto",
           "precio":"9.99",
@@ -105,7 +105,7 @@
       "products": [
         {
           "id": 10,
-          "content": "Santa Cruz de la Palma",
+          "name": "Santa Cruz de la Palma",
           "picture": "https://www.planetware.com/photos-large/E/santa-cruz-de-la-palma.jpg",
           "details": "Detalles del objeto",
           "precio":"9.99",
@@ -113,7 +113,7 @@
         },
         {
           "id": 4,
-          "content": "Caldera de Taburiente National Park",
+          "name": "Caldera de Taburiente National Park",
           "picture": "https://www.planetware.com/photos-large/E/spain-canary-islands-caldera-de-taburiente.jpg",
           "details": "Detalles del objeto",
           "precio":"9.99",
@@ -129,7 +129,7 @@
       "products": [
         {
           "id": 5,
-          "content": "Parque Nacional de Garajonay",
+          "name": "Parque Nacional de Garajonay",
           "picture": "https://www.planetware.com/photos-large/E/spain-la-gomera-garajonay-national-park.jpg",
           "details": "Detalles del objeto",
           "precio":"9.99",
@@ -137,7 +137,7 @@
         },
         {
           "id": 11,
-          "content": "Parque Nacional de Garajonay",
+          "name": "Parque Nacional de Garajonay",
           "picture": "https://www.planetware.com/photos-large/E/spain-la-gomera-garajonay-national-park.jpg",
           "details": "Detalles del objeto",
           "precio":"9.99",
@@ -167,18 +167,18 @@
       "idUser":1,
       "Fecha":"09/04/2019",
       "Hora":"20:00:00",
-      "estado":"comprando",
-      "total":"19.98"
-    }
+      "estado":"activa",
+      "total":"19.98",
+      "Carritos":[
+        {
+          "idCarrito": 1,
+          "idObjeto":1,
+          "cantidad":2
+        }
 
-  ],
-  "Carritos":[
-    {
-      "idCarrito": 1,
-      "idFactura": 1,
-      "idObjeto":1,
-      "cantidad":2
+      ]
     }
 
   ]
+
 }
