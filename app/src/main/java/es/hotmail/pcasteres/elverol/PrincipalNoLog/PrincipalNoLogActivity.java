@@ -74,14 +74,6 @@ public class PrincipalNoLogActivity
         this.presenter = presenter;
     }
 
-    @Override
-    public void displayData(PrincipalNoLogViewModel viewModel) {
-        //Log.e(TAG, "displayData()");
-
-        // deal with the data
-     //   ((TextView) findViewById(R.id.data)).setText(viewModel.data);
-    }
-
 
 
     @Override

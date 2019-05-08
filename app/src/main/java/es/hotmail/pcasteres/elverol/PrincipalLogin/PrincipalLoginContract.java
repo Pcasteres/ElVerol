@@ -4,15 +4,12 @@ import java.lang.ref.WeakReference;
 
 import es.hotmail.pcasteres.elverol.data.CategoryItem;
 import es.hotmail.pcasteres.elverol.data.RepositoryContract;
-import es.hotmail.pcasteres.elverol.data.UserItem;
 
 interface PrincipalLoginContract {
 
     interface View {
         void injectPresenter(Presenter presenter);
-
-        void displayData(PrincipalLoginViewModel viewModel);
-
+        //Muestra las categorias en pantalla
         void displayCategoryListData(PrincipalLoginViewModel viewModel);
     }
 
@@ -22,18 +19,16 @@ interface PrincipalLoginContract {
         void injectModel(Model model);
 
         void injectRouter(Router router);
-
+        // Llama al modelo para cargar los datos de las categorias
         void fetchCategoryListData();
-
-        void selectProductListData(int item);
-
+        // Al seleccionar una categoria pasa la categoria y llama al router para ir a la pantalla de ListaProductosNoLog
         void selectProductListData(CategoryItem item);
-
+        // Al seleccionar el carrito,  y llama al router para ir a la pantalla de ListaProductosNoLog
         void selectCarritoListData();
     }
 
     interface Model {
-
+        // Toma los datos de la Categoria del repositorio
         void fetchCategoryListData(
                 RepositoryContract.GetCategoryListCallback callback);
     }
@@ -42,8 +37,6 @@ interface PrincipalLoginContract {
         void navigateToListaProductosLoginScreen();
 
         void navigateToCarritoScreen();
-
-        void passDataToListaProductosLoginScreen(CategoryItem item, UserItem userItem);
 
         void passDataToCarritoScreen(int userItem);
 

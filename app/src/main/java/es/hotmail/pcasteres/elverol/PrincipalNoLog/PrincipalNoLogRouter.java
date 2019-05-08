@@ -18,27 +18,11 @@ public class PrincipalNoLogRouter implements PrincipalNoLogContract.Router {
     }
 
     @Override
-    public void navigateToNextScreen() {
-
-    }
-
-    @Override
-    public void passDataToNextScreen(PrincipalNoLogState state) {
-
-    }
-
-    @Override
     public void navigateToListaProductosNoLogScreen() {
         Context context = mediator.getApplicationContext();
         Intent intent = new Intent(context, ListaProductosNoLogActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(intent);
-    }
-
-    @Override
-    public void passDataToListaProductosNoLogScreen(int item) {
-
-
     }
 
     @Override

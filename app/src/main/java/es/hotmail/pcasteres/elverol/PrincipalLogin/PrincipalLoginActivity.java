@@ -1,7 +1,6 @@
 package es.hotmail.pcasteres.elverol.PrincipalLogin;
 
 import android.annotation.SuppressLint;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
@@ -10,7 +9,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 
-import es.hotmail.pcasteres.elverol.Carrito.CarritoActivity;
 import es.hotmail.pcasteres.elverol.R;
 import es.hotmail.pcasteres.elverol.app.AppMediator;
 import es.hotmail.pcasteres.elverol.data.CategoryItem;
@@ -34,9 +32,7 @@ public class PrincipalLoginActivity
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), CarritoActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                v.getContext().startActivity(intent);
+                presenter.selectCarritoListData();
             }
         });
         //inicializar los botones
@@ -72,14 +68,6 @@ public class PrincipalLoginActivity
     @Override
     public void injectPresenter(PrincipalLoginContract.Presenter presenter) {
         this.presenter = presenter;
-    }
-
-    @Override
-    public void displayData(PrincipalLoginViewModel viewModel) {
-        //Log.e(TAG, "displayData()");
-
-        // deal with the data
-     //   ((TextView) findViewById(R.id.data)).setText(viewModel.data);
     }
 
     @Override

@@ -51,12 +51,6 @@ public class PrincipalLoginPresenter implements PrincipalLoginContract.Presenter
 
     }
 
-    @Override
-    public void selectProductListData(int item) {
-
-    }
-
-
 
     @Override
     public void selectProductListData(CategoryItem item) {

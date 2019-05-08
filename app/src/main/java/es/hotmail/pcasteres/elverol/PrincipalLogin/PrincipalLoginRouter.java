@@ -7,7 +7,6 @@ import es.hotmail.pcasteres.elverol.Carrito.CarritoActivity;
 import es.hotmail.pcasteres.elverol.ListaProductosLog.ListaProductosLogActivity;
 import es.hotmail.pcasteres.elverol.app.AppMediator;
 import es.hotmail.pcasteres.elverol.data.CategoryItem;
-import es.hotmail.pcasteres.elverol.data.UserItem;
 
 public class PrincipalLoginRouter implements PrincipalLoginContract.Router {
 
@@ -34,11 +33,6 @@ public class PrincipalLoginRouter implements PrincipalLoginContract.Router {
         Intent intent = new Intent(context, CarritoActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(intent);
-    }
-
-    @Override
-    public void passDataToListaProductosLoginScreen(CategoryItem item, UserItem userItem) {
-
     }
 
     @Override

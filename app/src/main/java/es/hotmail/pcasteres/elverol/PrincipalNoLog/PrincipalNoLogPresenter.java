@@ -51,12 +51,6 @@ public class PrincipalNoLogPresenter implements PrincipalNoLogContract.Presenter
 
     }
 
-    @Override
-    public void selectProductListData(int item) {
-
-    }
-
-
 
     @Override
     public void selectProductListData(CategoryItem item) {
