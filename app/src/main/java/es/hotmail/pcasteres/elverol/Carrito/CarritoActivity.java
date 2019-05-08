@@ -49,9 +49,19 @@ public class CarritoActivity
     }
 
     @Override
-    public void displayData(CarritoViewModel viewModel) {
+    public void displayData(final CarritoViewModel viewModel) {
         Log.e(TAG, "displayDataCarrito()");
+        runOnUiThread(new Runnable() {
 
+            @Override
+            public void run() {
+
+                // deal with the data
+                int category = viewModel.userid;
+
+                listAdapter.setItems(viewModel.Carritoo);
+            }
+        });
         // deal with the data
         //((TextView) findViewById(R.id.data)).setText(viewModel.data);
     }

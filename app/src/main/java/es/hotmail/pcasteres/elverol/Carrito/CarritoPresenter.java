@@ -46,7 +46,7 @@ public class CarritoPresenter implements CarritoContract.Presenter {
         }
 
         // call the model
-        model.fetchData(viewModel.userid,
+        model.fetchData(1,
                 new RepositoryContract.GetCarritoListCallback() {
 
                     @Override
