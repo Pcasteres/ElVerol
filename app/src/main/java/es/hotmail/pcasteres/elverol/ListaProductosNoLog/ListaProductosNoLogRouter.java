@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 
 import es.hotmail.pcasteres.elverol.DetalleNoLog.DetalleNoLogActivity;
+import es.hotmail.pcasteres.elverol.Login.LoginActivity;
 import es.hotmail.pcasteres.elverol.app.AppMediator;
 import es.hotmail.pcasteres.elverol.data.CategoryItem;
 import es.hotmail.pcasteres.elverol.data.ProductItem;
@@ -40,4 +41,13 @@ public class ListaProductosNoLogRouter implements ListaProductosNoLogContract.Ro
         CategoryItem category = mediator.getCategory();
         return category;
     }
+
+    @Override
+    public void navigateToLoginScreen() {
+        Context context = mediator.getApplicationContext();
+        Intent intent = new Intent(context, LoginActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        context.startActivity(intent);
+    }
+
 }

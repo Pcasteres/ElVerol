@@ -9,7 +9,7 @@ import es.hotmail.pcasteres.elverol.data.FacturaItem;
 import es.hotmail.pcasteres.elverol.data.ProductItem;
 import es.hotmail.pcasteres.elverol.data.UserItem;
 
-@Database(entities = {CategoryItem.class, ProductItem.class, FacturaItem.class, UserItem.class, CarritoItem.class}, version = 1)
+@Database(entities = {CategoryItem.class, ProductItem.class, FacturaItem.class, UserItem.class, CarritoItem.class}, version = 2)
 public abstract class CatalogDatabase extends RoomDatabase {
 
   public abstract CategoryDao categoryDao();

@@ -53,5 +53,18 @@ public class LoginPresenter implements LoginContract.Presenter {
 
     }
 
+    @Override
+    public void iniciarSesion(){
+
+        router.navigateToPrincipalLog();
+
+    }
+
+    @Override
+    public void newUser(){
+
+        router.navigateToNewUser();
+
+    }
 
 }

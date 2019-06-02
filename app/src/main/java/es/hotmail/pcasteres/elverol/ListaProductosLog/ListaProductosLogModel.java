@@ -23,4 +23,13 @@ public class ListaProductosLogModel implements ListaProductosLogContract.Model {
         Log.e(TAG, "fetchListaProductosLogData()");
         repository.getProductList(category, callback);
     }
+    @Override
+    public void fetchfacturaListData(
+            final RepositoryContract.GetFacturaCallback callback) {
+
+        Log.e(TAG, "fetchFacturaListData()");
+
+                    repository.getFactura(1,callback);
+
+    }
 }

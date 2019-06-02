@@ -59,6 +59,13 @@ public class PrincipalNoLogPresenter implements PrincipalNoLogContract.Presenter
         router.navigateToListaProductosNoLogScreen();
     }
 
+    @Override
+    public void goToLoginScreen(){
+
+        router.navigateToLoginScreen();
+
+    }
+
 
 
 }

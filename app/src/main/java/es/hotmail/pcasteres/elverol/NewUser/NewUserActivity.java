@@ -1,14 +1,12 @@
 package es.hotmail.pcasteres.elverol.NewUser;
 
 import android.annotation.SuppressLint;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import es.hotmail.pcasteres.elverol.PrincipalLogin.PrincipalLoginActivity;
 import es.hotmail.pcasteres.elverol.R;
 
 public class NewUserActivity
@@ -29,9 +27,9 @@ public class NewUserActivity
         String user = User.getText().toString();
         EditText Direccion = (EditText) findViewById(R.id.direccion);
         String direccion = Direccion.getText().toString();
-        EditText Contrasena = (EditText) findViewById(R.id.contraseña);
+        EditText Contrasena = (EditText) findViewById(R.id.contrasena);
         String contrasena = Contrasena.getText().toString();
-        EditText Repetircontrasena = (EditText) findViewById(R.id.contraseñarepetida);
+        EditText Repetircontrasena = (EditText) findViewById(R.id.contrasenarepetida);
         String repetircontrasena = Repetircontrasena.getText().toString();
         EditText Municipio = (EditText) findViewById(R.id.municipio);
         String municipio = Municipio.getText().toString();
@@ -43,9 +41,7 @@ public class NewUserActivity
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), PrincipalLoginActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                v.getContext().startActivity(intent);
+                presenter.passToNextScreen();
             }
         });
 
@@ -59,13 +55,6 @@ public class NewUserActivity
         NewUserScreen.configure(this);
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-
-        // do some work
-        presenter.fetchData();
-    }
 
     @Override
     public void injectPresenter(NewUserContract.Presenter presenter) {

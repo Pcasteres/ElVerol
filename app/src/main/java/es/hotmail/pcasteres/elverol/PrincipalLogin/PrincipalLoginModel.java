@@ -20,17 +20,16 @@ public class PrincipalLoginModel implements PrincipalLoginContract.Model {
             final RepositoryContract.GetCategoryListCallback callback) {
 
         Log.e(TAG, "fetchCategoryListData()");
-
-        repository.loadCatalog(true, new RepositoryContract.FetchCatalogDataCallback() {
-
-            @Override
-            public void onCatalogDataFetched(boolean error) {
-                if(!error) {
                     repository.getCategoryList(callback);
-                }
-            }
-        });
 
     }
+    @Override
+    public void fetchfacturaListData(
+            final RepositoryContract.GetFacturaCallback callback) {
 
+        Log.e(TAG, "fetchFacturaListData()");
+
+                    repository.getFactura(1,callback);
+
+    }
 }

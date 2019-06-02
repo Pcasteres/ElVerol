@@ -55,15 +55,11 @@ public class PrincipalLoginActivity
         PrincipalLoginScreen.configure(this);
 
         // do some work
+        presenter.fetchFacturaData();
         presenter.fetchCategoryListData();
+
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-
-        // do some work
-    }
 
     @Override
     public void injectPresenter(PrincipalLoginContract.Presenter presenter) {

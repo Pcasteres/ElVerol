@@ -7,6 +7,7 @@ import es.hotmail.pcasteres.elverol.Carrito.CarritoActivity;
 import es.hotmail.pcasteres.elverol.ListaProductosLog.ListaProductosLogActivity;
 import es.hotmail.pcasteres.elverol.app.AppMediator;
 import es.hotmail.pcasteres.elverol.data.CategoryItem;
+import es.hotmail.pcasteres.elverol.data.FacturaItem;
 
 public class PrincipalLoginRouter implements PrincipalLoginContract.Router {
 
@@ -36,14 +37,15 @@ public class PrincipalLoginRouter implements PrincipalLoginContract.Router {
     }
 
     @Override
-    public void passDataToCarritoScreen(int userItem){
-        mediator.setUser(userItem);
+    public void passDataToCarritoScreen(FacturaItem userItem){
+        mediator.setFacturaItem(userItem);
     }
 
     @Override
-    public void passDataToListaProductosLoginScreen(CategoryItem item, int userItem) {
+    public void passDataToListaProductosLoginScreen(CategoryItem item, int userItem, FacturaItem fac) {
         mediator.setCategory(item);
         mediator.setUser(userItem);
+        mediator.setFactura(fac);
     }
     @Override
     public PrincipalLoginState getDataFromPreviousScreen() {

@@ -20,11 +20,9 @@ import static android.arch.persistence.room.ForeignKey.CASCADE;
         )
 )
 public class FacturaItem {
-    @PrimaryKey
-    public int idFactura;
+    @PrimaryKey(autoGenerate = true)
+    public int id;
     public int idUser;
-    public String Fecha;
-    public String hora;
     public String estado;
     public String total;
 

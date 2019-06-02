@@ -45,4 +45,11 @@ public class DetalleNoLogPresenter implements DetalleNoLogContract.Presenter {
 
     }
 
+    @Override
+    public void goToLoginScreen(){
+
+        router.navigateToLoginScreen();
+
+    }
+
 }

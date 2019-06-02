@@ -67,5 +67,11 @@ public class ListaProductosNoLogPresenter implements ListaProductosNoLogContract
         router.navigateToDetalleNoLogScreen();
     }
 
+    @Override
+    public void goToLoginScreen(){
+
+        router.navigateToLoginScreen();
+
+    }
 
 }

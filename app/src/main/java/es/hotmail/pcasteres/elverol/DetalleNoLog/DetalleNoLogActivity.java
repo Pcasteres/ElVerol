@@ -16,7 +16,6 @@ import com.bumptech.glide.RequestManager;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.RequestOptions;
 
-import es.hotmail.pcasteres.elverol.Login.LoginActivity;
 import es.hotmail.pcasteres.elverol.R;
 import es.hotmail.pcasteres.elverol.data.ProductItem;
 
@@ -37,9 +36,7 @@ public class DetalleNoLogActivity
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), LoginActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                v.getContext().startActivity(intent);
+                presenter.goToLoginScreen();
             }
         });
         // do the setup
@@ -48,7 +45,6 @@ public class DetalleNoLogActivity
         // do some work
         presenter.fetchDataProduct();
     }
-
 
     @Override
     public void injectPresenter(DetalleNoLogContract.Presenter presenter) {

@@ -23,6 +23,8 @@ public interface RepositoryContract {
   void updateCarrito(
           CarritoItem carritoItem, UpdateCarritoCallback callback);
 
+  void insertCarrito(CarritoItem carritoItem, InsertCarritoCallback callback);
+
   void deleteCategory(
           CategoryItem category, DeleteCategoryCallback callback);
 
@@ -43,12 +45,28 @@ public interface RepositoryContract {
     void setProductList(List<ProductItem> products);
   }
 
-  interface GetProductName {
-    void setProductName(String a);
+  interface GetAllProductListCallback {
+
+    //void setAllProducts(List<ProductItem> products);
+
+    void setAllProductList(List<MinProductItem> products);
+  }
+
+
+  interface GetProductDataCallback {
+    void setProductData(ProductItem item);
+  }
+
+  interface GetProductPrecioCallback {
+    void setProductPrecio(String a);
   }
 
   interface GetCarritoListCallback {
     void setCarritoList(List<CarritoItem> products);
+  }
+
+  interface GetCarritoItemCallback {
+    void setCarritoItem(CarritoItem product);
   }
 
   interface GetProductCallback {
@@ -57,8 +75,6 @@ public interface RepositoryContract {
 
   interface GetFacturaCallback {
     void setFactura(FacturaItem factura);
-
-    void setCarritoList(List<CarritoItem> loadCarritos);
   }
 
   interface GetUserCallback {
@@ -105,6 +121,12 @@ public interface RepositoryContract {
     void onCarritoUpdated();
   }
 
+  interface InsertCarritoCallback {
+
+    void onCarritoInsert();
+
+  }
+
   interface DeleteUserCallback {
     void onUserDeleted();
   }
@@ -116,14 +138,17 @@ public interface RepositoryContract {
 
 
 
-    void loadCatalog(boolean clearFirst, FetchCatalogDataCallback callback);
 
-    void getProductList(
+  void loadCatalog(boolean clearFirst, FetchCatalogDataCallback callback);
+
+  void getProductList(
           CategoryItem category, CatalogRepository.GetProductListCallback callback);
 
   void getProductList(int categoryId, CatalogRepository.GetProductListCallback callback);
 
-  void getProductName(int id, GetProductName callback);
+  void getAllProductList(int id,CatalogRepository.GetAllProductListCallback callback);
+
+  void getProductData(int id, GetProductDataCallback callback);
 
   void getcarritoList(
           FacturaItem facturaItem, GetCarritoListCallback callback);
@@ -131,7 +156,13 @@ public interface RepositoryContract {
   void getcarritoList(
           int facturaId, GetCarritoListCallback callback);
 
-  void getProduct(int id, CatalogRepository.GetProductCallback callback);
+  void getcarritoList(
+          GetCarritoListCallback callback);
+
+    void getcarritoItem(int i, int a,
+                        GetCarritoItemCallback callback);
+
+    void getProduct(int id, CatalogRepository.GetProductCallback callback);
 
   void getFactura(int id, GetFacturaCallback callback);
 

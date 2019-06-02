@@ -27,6 +27,14 @@ public interface CarritoDao {
   @Query("SELECT * FROM Carritos WHERE idCarrito = :id LIMIT 1")
   CarritoItem loadCarrito(int id);
 
-  @Query("SELECT * FROM Carritos WHERE factura_id=:factura_Id")
+  @Query("SELECT * FROM Carritos WHERE idObjeto = :id and idFactura = :fac LIMIT 1")
+  CarritoItem loadCarritoit(int id, int fac);
+
+  @Query("SELECT * FROM Carritos WHERE idFactura=:factura_Id")
   List<CarritoItem> loadCarritos(final int factura_Id);
+
+  @Query("SELECT * FROM Carritos WHERE idFactura=1")
+  List<CarritoItem> loadCarritos();
+  
+
 }

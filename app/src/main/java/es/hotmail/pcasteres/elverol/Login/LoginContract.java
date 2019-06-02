@@ -21,6 +21,10 @@ interface LoginContract {
         void injectRouter(Router router);
 
         void fetchData();
+        // Al seleccionar el boton iniciar sesion llama al router para ir a la pantalla de PrincipalLogin
+        void iniciarSesion();
+        // Al seleccionar el boton registrarse llama al router para ir a la pantalla de newuser
+        void newUser();
     }
 
     interface Model {
@@ -32,8 +36,11 @@ interface LoginContract {
     }
 
     interface Router {
-        void navigateToNextScreen();
-
+        // metodo para ir a la pagina PrincipalLogin
+        void navigateToPrincipalLog();
+        // metodo para ir a la pantalla de registro de usuario
+        void navigateToNewUser();
+        // metodo para pasar datos a una nueva pantalla en caso de que fuera necesario
         void passDataToNextScreen(UserItem userItem);
 
         LoginState getDataFromPreviousScreen();

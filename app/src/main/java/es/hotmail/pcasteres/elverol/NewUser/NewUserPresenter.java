@@ -1,7 +1,5 @@
 package es.hotmail.pcasteres.elverol.NewUser;
 
-import android.util.Log;
-
 import java.lang.ref.WeakReference;
 
 public class NewUserPresenter implements NewUserContract.Presenter {
@@ -52,6 +50,13 @@ public class NewUserPresenter implements NewUserContract.Presenter {
 
         // update the view
         view.get().displayData(viewModel);
+
+    }
+
+    @Override
+    public void passToNextScreen(){
+
+        router.navigateToNextScreen();
 
     }
 

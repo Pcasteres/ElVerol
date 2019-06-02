@@ -1,8 +1,9 @@
 package es.hotmail.pcasteres.elverol.NewUser;
 
-import android.util.Log;
-import android.content.Intent;
 import android.content.Context;
+import android.content.Intent;
+
+import es.hotmail.pcasteres.elverol.PrincipalLogin.PrincipalLoginActivity;
 import es.hotmail.pcasteres.elverol.app.AppMediator;
 
 public class NewUserRouter implements NewUserContract.Router {
@@ -18,7 +19,8 @@ public class NewUserRouter implements NewUserContract.Router {
     @Override
     public void navigateToNextScreen() {
         Context context = mediator.getApplicationContext();
-        Intent intent = new Intent(context, NewUserActivity.class);
+        Intent intent = new Intent(context, PrincipalLoginActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(intent);
     }
 

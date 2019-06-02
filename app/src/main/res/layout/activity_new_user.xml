@@ -107,7 +107,7 @@
 
             //Contraseña
             <TextView
-                android:id="@+id/contraseña2"
+                android:id="@+id/contrasena2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
@@ -118,7 +118,7 @@
                 android:textAppearance="@style/TextAppearance.AppCompat"
                 android:textSize="18sp" />
             <EditText
-                android:id="@+id/contraseña"
+                android:id="@+id/contrasena"
                 android:layout_width="363dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
@@ -130,7 +130,7 @@
             //como poner la ñ para que no se cambie el formato de letra
 
             <TextView
-                android:id="@+id/repetircontraseña1"
+                android:id="@+id/repetircontrasena1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
@@ -141,7 +141,7 @@
                 android:textAppearance="@style/TextAppearance.AppCompat"
                 android:textSize="18sp" />
             <EditText
-                android:id="@+id/contraseñarepetida"
+                android:id="@+id/contrasenarepetida"
                 android:layout_width="363dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"

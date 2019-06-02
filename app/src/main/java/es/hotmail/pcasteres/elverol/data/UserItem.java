@@ -6,7 +6,7 @@ import android.arch.persistence.room.PrimaryKey;
 
 @Entity(tableName = "Users")
 public class UserItem {
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = true)
     public int idUser;
     public String nombre;
     public String usuario;

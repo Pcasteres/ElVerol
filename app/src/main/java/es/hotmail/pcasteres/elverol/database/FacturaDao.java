@@ -27,8 +27,8 @@ public interface FacturaDao {
   @Query("SELECT * FROM Facturas")
   List<FacturaItem> loadProducts();
 
-  @Query("SELECT * FROM Facturas WHERE idFactura = :id LIMIT 1")
-  FacturaItem loadFactura(int id);
+  @Query("SELECT * FROM Facturas WHERE id = :idFactura")
+  FacturaItem loadFactura(int idFactura);
 
   @Query("SELECT * FROM Facturas WHERE idUser=:userId")
   List<FacturaItem> loadFacturas(final int userId);

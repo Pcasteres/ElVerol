@@ -4,6 +4,7 @@ import java.lang.ref.WeakReference;
 import java.util.List;
 
 import es.hotmail.pcasteres.elverol.data.CategoryItem;
+import es.hotmail.pcasteres.elverol.data.FacturaItem;
 import es.hotmail.pcasteres.elverol.data.ProductItem;
 import es.hotmail.pcasteres.elverol.data.RepositoryContract;
 
@@ -36,7 +37,7 @@ public class ListaProductosLogPresenter implements ListaProductosLogContract.Pre
     }
 
     @Override
-    public void fetchListaProductosNoLogData() {
+    public void fetchListaProductosLogData() {
         // Log.e(TAG, "fetchProductListData()");
 
         // set passed state
@@ -63,9 +64,31 @@ public class ListaProductosLogPresenter implements ListaProductosLogContract.Pre
 
     @Override
     public void selectProductListData(ProductItem item) {
-        router.passDataToDetalleLogActivity(item);
+        router.passDataToDetalleLogActivity(item,viewModel.facturaItem);
         router.navigateToDetalleLogScreen();
     }
 
+    @Override
+    public void fetchFacturaData() {
+        // Log.e(TAG, "fetchFacturaData()");
 
+        // call the model
+        model.fetchfacturaListData(new RepositoryContract.GetFacturaCallback() {
+
+            @Override
+            public void setFactura(FacturaItem facturaItem) {
+                viewModel.facturaItem = facturaItem;
+
+            }
+        });
+
+    }
+
+    @Override
+    public void selectCarritoListData(){
+
+        router.passDataToCarritoScreen(viewModel.facturaItem);
+        router.navigateToCarritoScreen();
+
+    }
 }

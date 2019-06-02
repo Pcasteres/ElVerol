@@ -30,7 +30,7 @@ public class CatalogRepository implements RepositoryContract {
 
   public static String TAG = CatalogRepository.class.getSimpleName();
 
-  public static final String DB_FILE = "catalog.db";
+  public static final String DB_FILE = "catalo7.db";
   public static final String JSON_FILE = "Verol.json";
   public static final String JSON_ROOT_cat = "categories";
   public static final String JSON_ROOT_us = "Users";
@@ -66,7 +66,7 @@ public class CatalogRepository implements RepositoryContract {
 
     @Override
   public void loadCatalog(final boolean clearFirst, final FetchCatalogDataCallback callback) {
-
+        Log.e(TAG, "loadCatalog()");
     AsyncTask.execute(new Runnable() {
 
       @Override
@@ -112,25 +112,39 @@ public class CatalogRepository implements RepositoryContract {
 
   }
 
+    @Override
+    public void getAllProductList(final int id , final GetAllProductListCallback callback) {
+
+        AsyncTask.execute(new Runnable() {
+
+            @Override
+            public void run() {
+                if(callback != null) {
+                    callback.setAllProductList(getProductDao().loadProductss(id));
+                }
+            }
+        });
+
+    }
+
   @Override
-  public void getProductName(final int id, final GetProductName callback){
+  public void getProductData(final int id, final GetProductDataCallback callback){
 
       AsyncTask.execute(new Runnable() {
 
           @Override
           public void run() {
               if(callback != null) {
-                  callback.setProductName(getProductDao().loadProductName(id));
+                  callback.setProductData(getProductDao().loadProductData(id));
               }
           }
       });
-
   }
     @Override
     public void getcarritoList(
             final FacturaItem facturaItem, final GetCarritoListCallback callback) {
 
-        getcarritoList(facturaItem.idFactura, callback);
+        getcarritoList(facturaItem.id, callback);
     }
 
   @Override
@@ -150,8 +164,39 @@ public class CatalogRepository implements RepositoryContract {
 
   }
 
+    @Override
+    public void getcarritoList(
+            final GetCarritoListCallback callback) {
+        Log.e(TAG, "getcarritolist()");
+        AsyncTask.execute(new Runnable() {
 
+            @Override
+            public void run() {
+                if(callback != null) {
 
+                    callback.setCarritoList(getCarritoDao().loadCarritos());
+                }
+            }
+        });
+
+    }
+
+    @Override
+    public void getcarritoItem(final int i, final int a,
+                               final GetCarritoItemCallback callback) {
+        Log.e(TAG, "getcarritoItem()");
+        AsyncTask.execute(new Runnable() {
+
+            @Override
+            public void run() {
+                if(callback != null) {
+
+                    callback.setCarritoItem(getCarritoDao().loadCarritoit(i,a));
+                }
+            }
+        });
+
+    }
 
 
   @Override
@@ -361,6 +406,22 @@ public class CatalogRepository implements RepositoryContract {
     }
 
     @Override
+    public void insertCarrito(
+            final CarritoItem carritoItem, final InsertCarritoCallback callback) {
+        Log.e(TAG, "insert carrito item()");
+        AsyncTask.execute(new Runnable() {
+
+            @Override
+            public void run() {
+                if(callback != null) {
+                    getCarritoDao().insertCarrito(carritoItem);
+                    callback.onCarritoInsert();
+                }
+            }
+        });
+    }
+
+    @Override
     public void deleteUser(
             final UserItem userItem, final DeleteUserCallback callback) {
 
@@ -425,6 +486,9 @@ public class CatalogRepository implements RepositoryContract {
       JSONArray jsonArrayus = jsonObject.getJSONArray(JSON_ROOT_us);
       JSONArray jsonArrayfac = jsonObject.getJSONArray(JSON_ROOT_fac);
 
+        Log.e(TAG, String.valueOf(jsonArraycat.length()+"cat"));
+        Log.e(TAG, String.valueOf(jsonArrayfac.length()+"fac"));
+        Log.e(TAG, String.valueOf(jsonArrayus.length()+"user"));
       // array categorias
         if (jsonArraycat.length() > 0) {
 
@@ -432,19 +496,18 @@ public class CatalogRepository implements RepositoryContract {
                     gson.fromJson(jsonArraycat.toString(), CategoryItem[].class)
             );
 
-            for (CategoryItem category: categories) {
+            for (CategoryItem category : categories) {
                 getCategoryDao().insertCategory(category);
             }
 
-            for (CategoryItem category: categories) {
-                for (ProductItem product: category.items) {
+            for (CategoryItem category : categories) {
+                for (ProductItem product : category.items) {
                     product.categoryId = category.id;
                     getProductDao().insertProduct(product);
                 }
             }
-
-            return true;
         }
+
 
       // array usuarios
         if (jsonArrayus.length() > 0) {
@@ -453,12 +516,11 @@ public class CatalogRepository implements RepositoryContract {
                     gson.fromJson(jsonArrayus.toString(), UserItem[].class)
             );
 
-            for (UserItem userItem: users) {
+            for (UserItem userItem : users) {
                 getUserDao().insertUser(userItem);
             }
-
-            return true;
         }
+
       // array factura
         if (jsonArrayfac.length() > 0) {
 
@@ -467,12 +529,17 @@ public class CatalogRepository implements RepositoryContract {
             );
 
             for (FacturaItem facturaItem: facturaItems) {
+                Log.e(TAG, String.valueOf(facturaItem.id+"id"));
+                Log.e(TAG, String.valueOf(facturaItem.idUser+"idu"));
+                Log.e(TAG, String.valueOf(facturaItem.estado+"estado"));
                 getFacturaDao().insertFactura(facturaItem);
             }
 
             for (FacturaItem facturaItem: facturaItems) {
                 for (CarritoItem carritoItem: facturaItem.items) {
-                    carritoItem.factura_id = facturaItem.idFactura;
+                    carritoItem.idFactura= facturaItem.id;
+                    Log.e(TAG, String.valueOf(carritoItem.idCarrito+"id"));
+                    Log.e(TAG, String.valueOf(carritoItem.idFactura+"idfac"));
                     getCarritoDao().insertCarrito(carritoItem);
                 }
             }

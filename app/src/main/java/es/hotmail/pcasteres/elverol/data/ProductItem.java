@@ -17,14 +17,14 @@ import static android.arch.persistence.room.ForeignKey.CASCADE;
         )
 )
 public class ProductItem {
-  @PrimaryKey
+  @PrimaryKey(autoGenerate = true)
   public int id;
 
   public String name;
   public String picture;
   public String details;
   public String precio;
-  public int Stock;
+  public int stock;
 
   @ColumnInfo(name = "category_id")
   public int categoryId;

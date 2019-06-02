@@ -24,6 +24,8 @@ interface PrincipalNoLogContract {
         void fetchCategoryListData();
         // Al seleccionar una categoria pasa la categoria y llama al router para ir a la pantalla de ListaProductosNoLog
         void selectProductListData(CategoryItem item);
+        // Al seleccionar el boton de login llama al router para ir a la pantalla del Login
+        void goToLoginScreen();
     }
 
     interface Model {
@@ -35,6 +37,8 @@ interface PrincipalNoLogContract {
     interface Router {
         // metodo para ir a la siguiente pantalla
         void navigateToListaProductosNoLogScreen();
+        // metodo para ir a la pantalla de login
+        void navigateToLoginScreen();
         // metodo para pasar la categoria a la siguiente pantalla
         void passDataToListaProductosNoLogScreen(CategoryItem item);
 

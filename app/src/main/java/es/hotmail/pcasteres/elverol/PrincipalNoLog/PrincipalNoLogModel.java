@@ -15,6 +15,7 @@ public class PrincipalNoLogModel implements PrincipalNoLogContract.Model {
 
     }
 
+
     @Override
     public void fetchCategoryListData(
             final RepositoryContract.GetCategoryListCallback callback) {

@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 
 import es.hotmail.pcasteres.elverol.app.AppMediator;
+import es.hotmail.pcasteres.elverol.data.FacturaItem;
 
 public class CarritoRouter implements CarritoContract.Router {
 
@@ -28,8 +29,8 @@ public class CarritoRouter implements CarritoContract.Router {
     }
 
     @Override
-    public int getDataFromPreviousScreen() {
-        int facturaItem = mediator.getUser();
+    public FacturaItem getDataFromPreviousScreen() {
+        FacturaItem facturaItem = mediator.facturaItem;
         return facturaItem;
     }
 }

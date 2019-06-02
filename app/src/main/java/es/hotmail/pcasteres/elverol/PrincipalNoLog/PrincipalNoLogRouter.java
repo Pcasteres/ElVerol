@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 
 import es.hotmail.pcasteres.elverol.ListaProductosNoLog.ListaProductosNoLogActivity;
+import es.hotmail.pcasteres.elverol.Login.LoginActivity;
 import es.hotmail.pcasteres.elverol.app.AppMediator;
 import es.hotmail.pcasteres.elverol.data.CategoryItem;
 
@@ -21,6 +22,14 @@ public class PrincipalNoLogRouter implements PrincipalNoLogContract.Router {
     public void navigateToListaProductosNoLogScreen() {
         Context context = mediator.getApplicationContext();
         Intent intent = new Intent(context, ListaProductosNoLogActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        context.startActivity(intent);
+    }
+
+    @Override
+    public void navigateToLoginScreen() {
+        Context context = mediator.getApplicationContext();
+        Intent intent = new Intent(context, LoginActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(intent);
     }

@@ -20,17 +20,20 @@ interface DetalleNoLogContract {
         void injectModel(Model model);
 
         void injectRouter(Router router);
-
+        // metodo que llama al router para tomar el objeto seleccionado en la pantalla anterior
         void fetchDataProduct();
-
+        // Al seleccionar el boton de login llama al router para ir a la pantalla del Login
+        void goToLoginScreen();
     }
 
     interface Model {
-        String fetchData();
+
     }
 
     interface Router {
-
+        // metodo para tomar el producto seleccionado en la pantalla anterior
         ProductItem getDataFromProductListScreen();
+        // metodo para ir a la pantalla de login
+        void navigateToLoginScreen();
     }
 }

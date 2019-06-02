@@ -42,7 +42,12 @@ public class AppMediator extends Application {
     private CarritoItem carrito;
     private CategoryItem category;
     private ProductItem product;
-    private FacturaItem facturaItem;
+
+    public void setFacturaItem(FacturaItem facturaItem) {
+        this.facturaItem = facturaItem;
+    }
+
+    public FacturaItem facturaItem;
 
     public FacturaItem facturaItem2;
 

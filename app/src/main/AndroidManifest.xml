@@ -11,75 +11,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        android:name=".app.AppMediator"
-        >
+        android:name=".app.AppMediator">
         <activity android:name=".PrincipalNoLog.PrincipalNoLogActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category
-                    android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".ListaProductosNoLog.ListaProductosNoLogActivity"
-            android:parentActivityName=".PrincipalNoLog.PrincipalNoLogActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".PrincipalNoLog.PrincipalNoLogActivity"/>
-        </activity>
-        <activity
-            android:name=".DetalleNoLog.DetalleNoLogActivity"
-            android:parentActivityName=".ListaProductosNoLog.ListaProductosNoLogActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".ListaProductosNoLog.ListaProductosNoLogActivity"/>
-        </activity>
-        <activity
-            android:name=".ListaProductosLog.ListaProductosLogActivity"
-            android:parentActivityName=".PrincipalLogin.PrincipalLoginActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".PrincipalLogin.PrincipalLoginActivity"/>
-        </activity>
-        <activity
-            android:name=".PrincipalLogin.PrincipalLoginActivity"
-            android:parentActivityName=".PrincipalNoLog.PrincipalNoLogActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".PrincipalNoLog.PrincipalNoLogActivity"/>
-        </activity>
-        <activity
-            android:name=".DetalleLog.DetalleLogActivity"
-            android:parentActivityName=".ListaProductosLog.ListaProductosLogActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".ListaProductosLog.ListaProductosLogActivity"/>
-        </activity>
-        <activity
-            android:name=".Carrito.CarritoActivity"
-            android:parentActivityName=".PrincipalLogin.PrincipalLoginActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".PrincipalLogin.PrincipalLoginActivity"/>
-        </activity>
-        <activity
-            android:name=".Login.LoginActivity"
-            android:parentActivityName=".ListaProductosNoLog.ListaProductosNoLogActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".ListaProductosNoLog.ListaProductosNoLogActivity"/>
-        </activity>
-        <activity
-            android:name=".NewUser.NewUserActivity"
-            android:parentActivityName=".Login.LoginActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".Login.LoginActivity"/>
-        </activity>
-
-
-
+        <activity android:name=".ListaProductosNoLog.ListaProductosNoLogActivity"/>
+        <activity android:name=".DetalleNoLog.DetalleNoLogActivity"/>
+        <activity android:name=".ListaProductosLog.ListaProductosLogActivity"/>
+        <activity android:name=".PrincipalLogin.PrincipalLoginActivity"/>
+        <activity android:name=".DetalleLog.DetalleLogActivity"/>
+        <activity android:name=".Carrito.CarritoActivity"/>
+        <activity android:name=".Login.LoginActivity"/>
+        <activity android:name=".NewUser.NewUserActivity"/>
     </application>
 
 

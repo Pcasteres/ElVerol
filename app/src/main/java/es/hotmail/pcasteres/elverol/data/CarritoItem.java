@@ -10,18 +10,24 @@ import static android.arch.persistence.room.ForeignKey.CASCADE;
 @Entity(
         tableName = "Carritos",
         foreignKeys = @ForeignKey(
-                entity = FacturaItem.class,
-                parentColumns = "idFactura",
-                childColumns = "factura_id",
-                onDelete = CASCADE
-        )
+                    entity = FacturaItem.class,
+                    parentColumns = "id",
+                    childColumns = "idFactura",
+                    onDelete = CASCADE)
+
 )
 public class CarritoItem {
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = true)
     public int idCarrito;
     public int idObjeto;
     public int cantidad;
-    @ColumnInfo(name = "factura_id")
-    public int factura_id;
+    @ColumnInfo(name = "idFactura")
+    public int idFactura;
+
+    public int getIdObjeto() {
+        return idObjeto;
+    }
 
 }
+
+

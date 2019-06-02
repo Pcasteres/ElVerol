@@ -11,7 +11,7 @@ import java.util.List;
 
 @Entity(tableName = "categories")
 public class CategoryItem {
-  @PrimaryKey
+  @PrimaryKey(autoGenerate = true)
   public int id;
 
   public String content;

@@ -1,7 +1,6 @@
 package es.hotmail.pcasteres.elverol.PrincipalNoLog;
 
 import android.annotation.SuppressLint;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
@@ -10,7 +9,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 
-import es.hotmail.pcasteres.elverol.Login.LoginActivity;
 import es.hotmail.pcasteres.elverol.R;
 import es.hotmail.pcasteres.elverol.app.AppMediator;
 import es.hotmail.pcasteres.elverol.data.CategoryItem;
@@ -36,9 +34,7 @@ public class PrincipalNoLogActivity
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), LoginActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                v.getContext().startActivity(intent);
+                presenter.goToLoginScreen();
             }
         });
         listAdapter = new PrincipalNoLogAdapter(new View.OnClickListener() {
@@ -62,12 +58,6 @@ public class PrincipalNoLogActivity
         presenter.fetchCategoryListData();
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-
-        // do some work
-    }
 
     @Override
     public void injectPresenter(PrincipalNoLogContract.Presenter presenter) {

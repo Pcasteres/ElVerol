@@ -32,18 +32,20 @@ public class ListaProductosLogRouter implements ListaProductosLogContract.Router
     public void navigateToCarritoScreen() {
         Context context = mediator.getApplicationContext();
         Intent intent = new Intent(context, CarritoActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(intent);
     }
 
 
     @Override
-    public void passDataToDetalleLogActivity(ProductItem item) {
+    public void passDataToDetalleLogActivity(ProductItem item,FacturaItem fac) {
         mediator.setProduct(item);
+        mediator.setFactura(fac);
     }
 
     @Override
-    public void passDataToCarritoActivity(FacturaItem item) {
-        mediator.setFactura(item);
+    public void passDataToCarritoScreen(FacturaItem fac){
+        mediator.setFacturaItem(fac);
     }
 
     @Override

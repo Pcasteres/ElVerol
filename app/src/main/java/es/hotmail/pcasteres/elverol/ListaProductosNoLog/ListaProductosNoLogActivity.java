@@ -39,9 +39,7 @@ public class ListaProductosNoLogActivity
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), LoginActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                v.getContext().startActivity(intent);
+                presenter.goToLoginScreen();
             }
         });
 
@@ -61,14 +59,6 @@ public class ListaProductosNoLogActivity
 
         presenter.fetchListaProductosNoLogData();
 
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-
-        // do some work
-        presenter.fetchListaProductosNoLogData();
     }
 
     @Override

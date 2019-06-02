@@ -25,11 +25,14 @@ public class CarritoActivity
 
         //Código para eliminar el action bar
         getSupportActionBar().hide();
+
         listAdapter = new CarritoAdapter(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
                 CarritoItem item = (CarritoItem) view.getTag();
+                presenter.deleteCarritoItem(item);
+                presenter.fetchData();
             }
         });
 
@@ -48,6 +51,7 @@ public class CarritoActivity
         this.presenter = presenter;
     }
 
+
     @Override
     public void displayData(final CarritoViewModel viewModel) {
         Log.e(TAG, "displayDataCarrito()");
@@ -58,8 +62,9 @@ public class CarritoActivity
 
                 // deal with the data
                 int category = viewModel.userid;
-
+                Log.e(TAG, viewModel.Carritoo.toString());
                 listAdapter.setItems(viewModel.Carritoo);
+                listAdapter.setobjects(viewModel.productss);
             }
         });
         // deal with the data
